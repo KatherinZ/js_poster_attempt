@@ -1,8 +1,8 @@
 @import "reset.css";
 @font-face {
   font-family: "Ruslan display";
-  font-weight: bold;
-  src: url(fonts/Ruslandisplay.ttf)
+  font-weight: auto;
+  src: url(fonts/Gilroy-SemiBold.ttf)
   format('truetype');
 }
 body{
@@ -13,11 +13,20 @@ body{
 p {
   font-family: 'univers LT CYR', helvetica, sans-serif;
 }
+h1{
+  font-size: 216px;
+  text-align: center;
+  color: #40E0D0;
+  font-family: "Gilroy-SemiBold", helvetica, sans-serif;
+  z-index: -2;
+  position: absolute;
+}
 .square_1{
   border: 4px solid #fff;
   width: 136px;
   height: 136px;
   color: #fff;
+  transform: translateX(300px);
 }
 
 .numbers, .numbers + p{
