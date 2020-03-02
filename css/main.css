@@ -1,8 +1,68 @@
 @import "reset.css";
 @font-face {
-  font-family: "Ruslan display";
+  font-family: "Gilroy";
   font-weight: auto;
   src: url(fonts/Gilroy-SemiBold.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "AkzidenzGrotesk";
+  font-weight: auto;
+  src: url(fonts/AkzidenzGroteskPro-Bold.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: auto;
+  src: url(fonts/GothaProBol.otf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Oldbaskerville";
+  font-weight: auto;
+  src: url(fonts/7092.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "ScotchModern";
+  font-weight: auto;
+  src: url(fonts/ScotchModern-Bold.otf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Caslon";
+  font-weight: auto;
+  src: url(fonts/7092.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Swift";
+  font-weight: auto;
+  src: url(fonts/Swift-Bold.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "TrajanPro3";
+  font-weight: auto;
+  src: url(fonts/TrajanPro3-Regular.otf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Caslon";
+  font-weight: auto;
+  src: url(fonts/7129.ttf)
+  format('truetype');
+}
+@font-face {
+  font-family: "Garamond";
+  font-weight: auto;
+  src: url(fonts/GARA.TTF)
+  format('truetype');
+}
+@font-face {
+  font-family: "Optima";
+  font-weight: auto;
+  src: url(fonts/Optima.ttf)
   format('truetype');
 }
 body{
@@ -11,9 +71,9 @@ body{
   max-height: 7000px;
 }
 p {
-  font-family: 'univers LT CYR', helvetica, sans-serif;
+  font-family: "univers LT CYR", helvetica, sans-serif;
 }
-h1{
+.name h1{
   font-size: 216px;
   text-align: center;
   color: #40E0D0;
@@ -21,12 +81,24 @@ h1{
   z-index: -2;
   position: absolute;
 }
+/* .name{
+  position: absolute;
+  text-align: center;
+} */
+.name img{
+  height: 600px;
+  max-width: 1400px;
+  position: absolute;
+  text-align: center;
+  /* transition:  5s all ease; */
+}
 .square_1{
   border: 4px solid #fff;
   width: 136px;
   height: 136px;
   color: #fff;
   transform: translateX(300px);
+  margin: 10px;
 }
 
 .numbers, .numbers + p{
@@ -58,4 +130,49 @@ h1{
 .square_1 h2 + p{
   margin-top: 15px;
   font-size: 18px;
+}
+
+
+/* ШРИФТЫ */
+.all_elements:nth-last-of-type(1) h2{
+  font-family: "ScotchModern", serif;
+}
+.all_elements:nth-last-of-type(2) h2{
+  font-family: times, serif;
+}
+.all_elements:nth-last-of-type(3) h2{
+  font-family: "TrajanPro3", serif;
+}
+.all_elements:nth-last-of-type(4) h2{
+  font-family: "Garamond", serif;
+}
+.all_elements:nth-last-of-type(5) h2{
+  font-family: "Oldbaskerville", serif;
+}
+.all_elements:nth-last-of-type(6) h2{
+  font-family: "Optima", serif;
+}
+.all_elements:nth-last-of-type(7) h2{
+  font-family: "Swift", serif;
+}
+.all_elements:nth-last-of-type(8) h2{
+  font-family: "Bodoni", serif;
+}
+.all_elements:nth-last-of-type(9) h2{
+  font-family: "Caslon", serif;
+}
+.all_elements:nth-last-of-type(10) h2{
+  font-family: "univers LT CYR", helvetica, sans-serif;
+}
+.all_elements:nth-last-of-type(11) h2{
+  font-family: "AkzidenzGrotesk", helvetica, sans-serif;
+}
+.all_elements:nth-last-of-type(12) h2{
+  font-family: arial, sans-serif;
+}
+.all_elements:nth-last-of-type(13) h2{
+  font-family: "Gilroy", sans-serif;
+}
+.all_elements:nth-last-of-type(14) h2{
+  font-family: "Gotham", sans-serif;
 }
