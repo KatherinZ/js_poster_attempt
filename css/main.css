@@ -15,7 +15,7 @@
   font-family: "Gotham";
   font-weight: auto;
   src: url(fonts/GothaProBol.otf)
-  format('truetype');
+  format('opentype');
 }
 @font-face {
   font-family: "Oldbaskerville";
@@ -27,7 +27,7 @@
   font-family: "ScotchModern";
   font-weight: auto;
   src: url(fonts/ScotchModern-Bold.otf)
-  format('truetype');
+  format('opentype');
 }
 @font-face {
   font-family: "Caslon";
@@ -45,7 +45,7 @@
   font-family: "TrajanPro3";
   font-weight: auto;
   src: url(fonts/TrajanPro3-Regular.otf)
-  format('truetype');
+  format('opentype');
 }
 @font-face {
   font-family: "Caslon";
@@ -68,14 +68,19 @@
 body{
   background-color: #000;
   max-width: 7000px;
-  max-height: 7000px;
+  max-height: 1000px;
 }
 p {
   font-family: "univers LT CYR", helvetica, sans-serif;
 }
+.name{
+  text-align: center;
+  position: fixed;
+  left: 3%;
+  top: 15%;
+}
 .name h1{
   font-size: 216px;
-  text-align: center;
   color: #40E0D0;
   font-family: "Gilroy-SemiBold", helvetica, sans-serif;
   z-index: -2;
@@ -90,7 +95,7 @@ p {
   max-width: 1400px;
   position: absolute;
   text-align: center;
-  /* transition:  5s all ease; */
+  transition: 1000ms all ease;
 }
 .square_1{
   border: 4px solid #fff;
@@ -131,48 +136,50 @@ p {
   margin-top: 15px;
   font-size: 18px;
 }
-
+.all_elements{
+  max-height: 2000px;
+}
 
 /* ШРИФТЫ */
-.all_elements:nth-last-of-type(1) h2{
+.all_elements .square_1:nth-of-type(1) h2{
   font-family: "ScotchModern", serif;
 }
-.all_elements:nth-last-of-type(2) h2{
+.all_elements .square_1:nth-of-type(2) h2{
   font-family: times, serif;
 }
-.all_elements:nth-last-of-type(3) h2{
+.all_elements .square_1:nth-of-type(3) h2{
   font-family: "TrajanPro3", serif;
 }
-.all_elements:nth-last-of-type(4) h2{
+.all_elements .square_1:nth-of-type(4) h2{
   font-family: "Garamond", serif;
 }
-.all_elements:nth-last-of-type(5) h2{
+.all_elements .square_1:nth-of-type(5) h2{
   font-family: "Oldbaskerville", serif;
 }
-.all_elements:nth-last-of-type(6) h2{
+.all_elements .square_1:nth-of-type(6) h2{
   font-family: "Optima", serif;
 }
-.all_elements:nth-last-of-type(7) h2{
+.all_elements .square_1:nth-of-type(7) h2{
   font-family: "Swift", serif;
 }
-.all_elements:nth-last-of-type(8) h2{
+.all_elements .square_1:nth-of-type(8) h2{
   font-family: "Bodoni", serif;
 }
-.all_elements:nth-last-of-type(9) h2{
+.all_elements .square_1:nth-of-type(9) h2{
   font-family: "Caslon", serif;
 }
-.all_elements:nth-last-of-type(10) h2{
+.all_elements .square_1:nth-of-type(10) h2{
   font-family: "univers LT CYR", helvetica, sans-serif;
 }
-.all_elements:nth-last-of-type(11) h2{
+.all_elements .square_1:nth-of-type(11) h2{
   font-family: "AkzidenzGrotesk", helvetica, sans-serif;
 }
-.all_elements:nth-last-of-type(12) h2{
+.all_elements .square_1:nth-of-type(12) h2{
   font-family: arial, sans-serif;
 }
-.all_elements:nth-last-of-type(13) h2{
+.all_elements .square_1:nth-of-type(13) h2{
   font-family: "Gilroy", sans-serif;
 }
-.all_elements:nth-last-of-type(14) h2{
+.all_elements .square_1:nth-of-type(14) h2{
   font-family: "Gotham", sans-serif;
 }
