@@ -6,6 +6,12 @@
   format('truetype');
 }
 @font-face {
+  font-family: "Gilroy-Medium";
+  font-weight: auto;
+  src: url(fonts/Gilroy-Medium.ttf)
+  format('truetype');
+}
+@font-face {
   font-family: "AkzidenzGrotesk";
   font-weight: auto;
   src: url(fonts/AkzidenzGroteskPro-Bold.ttf)
@@ -71,7 +77,7 @@ body{
   max-height: 1000px;
 }
 p {
-  font-family: "univers LT CYR", helvetica, sans-serif;
+  font-family: 'Gilroy-Medium', helvetica, sans-serif;
 }
 .name{
   text-align: center;
@@ -82,7 +88,7 @@ p {
 .name h1{
   font-size: 216px;
   color: #40E0D0;
-  font-family: "Gilroy-SemiBold", helvetica, sans-serif;
+  font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
 }
@@ -107,7 +113,7 @@ p {
 }
 
 .numbers, .numbers + p{
-  font-family: 'univers LT CYR', helvetica, sans-serif;
+  font-family: 'Gilroy-Medium', helvetica, sans-serif;
   margin-right: 10px;
   display: flex;
   align-items: baseline;
@@ -117,6 +123,7 @@ p {
 .numbers p:last-child{
   font-size: 18px;
   font-weight: bold;
+  font-family: 'Gilroy-Medium', helvetica, sans-serif;
 }
 .square_1 h2{
   font-size: 46px;
