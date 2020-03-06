@@ -1,12 +1,18 @@
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
     el.style.transform = `translate(${anime.random(0, 300)}vw, ${anime.random(0, -30)}vh)`
+    el.onmouseenter  = function(){
+      el.style.background = getRGBColor()
+    }
+    el.onmouseleave = function(){
+      el.style.background = 'none'
+    }
+    function addEl(){
+    let cln = el.cloneNode(true)
+    document.body.all_elements.append(cln)
+    }
 })
-// let numberOfWords = 18
-//   for (let i = 0; i < numberOfWords; i++){
-//     arr.push('.square_1')
-//     return arr
-// }
+
 let animatedMorph = anime({
   targets: '.name img',
   scaleX: [
@@ -26,24 +32,8 @@ let animatedMorph = anime({
   direction: 'alternate',
   easing: 'linear'
 })
-// let elem = document.getElementsByClassName('square_1')
-// arr.forEach(function(v) {
-//   v.addEventListener('mouseenter', function(){
-//     this.style.background = getRGBColor()
-//   })
-//   v.addEventListener('mouseleave', function(){
-//     this.style.background = 'inherit'
-//   })
-// })
-// function changeBack(){
-//   for (let i = 0; i < arr.length; i++){
-//     document.getElementsByClassName('square_1')[5].style.background = getRGBColor()
-//   }
-// }
-// document.getElementsByClassName('square_1')[5].onmouseenter = getRGBColor()
-
-arr.forEach(getRGBColor())
 
 function getRGBColor(){
   return `rgb(${anime.random(0, 255)}, ${anime.random(0, 255)}, ${anime.random(0, 255)})`
 }
+document.getElementById('element_j').onclick = document.getElementById('element_j_big').style.display = 'block'
