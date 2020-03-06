@@ -41,7 +41,6 @@ let animatedMorph = anime({
   direction: 'alternate',
   easing: 'linear'
 })
-document.getElementsByClassName('all_elements').style.height = 1200 + 'px'
 // function duplicate(arr){
 //   let temp = arr.slice()
 //   for (i = 0; i < arr.length; i++){

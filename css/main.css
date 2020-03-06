@@ -12,7 +12,7 @@
   format('truetype');
 }
 @font-face {
-  font-family: "AkzidenzGrotesk";
+  font-family: "AkzidenzGroteskPro-Bold";
   font-weight: auto;
   src: url(fonts/AkzidenzGroteskPro-Bold.ttf)
   format('truetype');
@@ -30,7 +30,7 @@
   format('truetype');
 }
 @font-face {
-  font-family: "ScotchModern";
+  font-family: "ScotchModern-Bold";
   font-weight: auto;
   src: url(fonts/ScotchModern-Bold.otf)
   format('opentype');
@@ -48,7 +48,7 @@
   format('truetype');
 }
 @font-face {
-  font-family: "TrajanPro3";
+  font-family: "TrajanPro3-Regular";
   font-weight: auto;
   src: url(fonts/TrajanPro3-Regular.otf)
   format('opentype');
@@ -87,15 +87,14 @@ p {
 }
 .name h1{
   font-size: 216px;
-  color: #40E0D0;
+  color: #79D5E0;
   font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
 }
-/* .name{
-  position: absolute;
-  text-align: center;
-} */
+.name:hover{
+  color: #40E0D0;
+}
 .name img{
   height: 600px;
   max-width: 1400px;
@@ -149,13 +148,13 @@ p {
 
 /* ШРИФТЫ */
 .all_elements .square_1:nth-of-type(1) h2{
-  font-family: "ScotchModern", serif;
+  font-family: "ScotchModern-Bold", serif;
 }
 .all_elements .square_1:nth-of-type(2) h2{
   font-family: times, serif;
 }
 .all_elements .square_1:nth-of-type(3) h2{
-  font-family: "TrajanPro3", serif;
+  font-family: "TrajanPro3-Regular", serif;
 }
 .all_elements .square_1:nth-of-type(4) h2{
   font-family: "Garamond", serif;
@@ -179,7 +178,7 @@ p {
   font-family: "univers LT CYR", helvetica, sans-serif;
 }
 .all_elements .square_1:nth-of-type(11) h2{
-  font-family: "AkzidenzGrotesk", helvetica, sans-serif;
+  font-family: "AkzidenzGroteskPro-Bold", helvetica, sans-serif;
 }
 .all_elements .square_1:nth-of-type(12) h2{
   font-family: arial, sans-serif;
