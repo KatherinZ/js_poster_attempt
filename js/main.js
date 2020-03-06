@@ -1,18 +1,3 @@
-// anime.set('.square_1', {
-//   translateX: function() { return anime.random(50, 250); },
-// });
-
-// let elementsArray = document.querySelectorAll('.all_elements .square_1')
-// function shuffle(elementsArray){
-// let count = 0
-// while (elementsArray.length > count) {
-//   square_1.style.translateX = getRandomValue()
-//   square_1.style.translateY = getRandomValue()
-//   count += 1
-// }
-// return elementsArray
-// }
-// onload shuffle(elementsArray)
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
     el.style.transform = `translate(${anime.random(0, 300)}vw, ${anime.random(0, -30)}vh)`
@@ -41,10 +26,24 @@ let animatedMorph = anime({
   direction: 'alternate',
   easing: 'linear'
 })
-// function duplicate(arr){
-//   let temp = arr.slice()
-//   for (i = 0; i < arr.length; i++){
-//     temp.push(arr[i])
+// let elem = document.getElementsByClassName('square_1')
+// arr.forEach(function(v) {
+//   v.addEventListener('mouseenter', function(){
+//     this.style.background = getRGBColor()
+//   })
+//   v.addEventListener('mouseleave', function(){
+//     this.style.background = 'inherit'
+//   })
+// })
+// function changeBack(){
+//   for (let i = 0; i < arr.length; i++){
+//     document.getElementsByClassName('square_1')[5].style.background = getRGBColor()
 //   }
-//   return temp
 // }
+// document.getElementsByClassName('square_1')[5].onmouseenter = getRGBColor()
+
+arr.forEach(getRGBColor())
+
+function getRGBColor(){
+  return `rgb(${anime.random(0, 255)}, ${anime.random(0, 255)}, ${anime.random(0, 255)})`
+}
