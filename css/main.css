@@ -191,27 +191,56 @@ p {
 .all_elements .square_1:nth-of-type(14) h2{
   font-family: "Gotham", sans-serif;
 }
-.large .square_2{
-  z-index: 10;
+ .square_2_j,
+.square_2_es,
+.square_2_vo,
+.square_2_ke,
+.square_2_fi,
+.square_2_am,
+.square_2_ap,
+.square_2_v,
+.square_2_lu,
+.square_2_la,
+.square_2_kp,
+.square_2_f,
+.square_2_ra,
+.square_2_mo{
   width: 250px;
   height: 250px;
   color: #fff;
   background-color: #000;
   border: 4px solid #fff;
+  margin-left: -30px;
+  margin-top: -30px;
   display: none;
-  
+  top: 0;
+  position: absolute;
+  z-index: 100;
 }
-.large .square_2 p{
+ .square_2 p{
   font-family: "Gilroy", sans-serif;
   font-size: 26px;
   margin-left: 15px;
   margin-top: 15px;
   font-weight: lighter;
 }
-.large .square_2 img{
+.square_2_j img,
+.square_2_es img,
+.square_2_vo img,
+.square_2_ke img,
+.square_2_fi img,
+.square_2_am img,
+.square_2_ap img,
+.square_2_v img,
+.square_2_lu img,
+.square_2_la img,
+.square_2_kp img,
+.square_2_f img,
+.square_2_ra img,
+.square_2_mo img{
   height: 120px;
   width: auto;
   position: absolute;
-  margin-left: 70px;
+  margin-left: 80px;
   margin-top: 30px;
 }

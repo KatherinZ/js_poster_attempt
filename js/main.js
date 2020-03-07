@@ -7,10 +7,11 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
     el.onmouseleave = function(){
       el.style.background = 'none'
     }
-    function addEl(){
+    // function addEl(){
     let cln = el.cloneNode(true)
-    document.body.all_elements.append(cln)
-    }
+    document.body.append(cln)
+    console.log(cln);
+    // }
 })
 
 let animatedMorph = anime({
@@ -36,4 +37,8 @@ let animatedMorph = anime({
 function getRGBColor(){
   return `rgb(${anime.random(0, 255)}, ${anime.random(0, 255)}, ${anime.random(0, 255)})`
 }
-document.getElementById('element_j').onclick = document.getElementById('element_j_big').style.display = 'block'
+let voronka = document.getElementById('element_vo')
+voronka.onclick = document.getElementById('element_vo_big').style.display = 'block'
+let filtr = document.getElementById('element_fi')
+let filtr_big = document.getElementById('element_fi_big')
+filtr.onclick = filtr_big.style.display = 'block'
