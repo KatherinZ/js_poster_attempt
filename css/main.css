@@ -191,7 +191,7 @@ p {
 .all_elements .square_1:nth-of-type(14) h2{
   font-family: "Gotham", sans-serif;
 }
- .square_2_j,
+.square_2_j,
 .square_2_es,
 .square_2_vo,
 .square_2_ke,
@@ -212,35 +212,73 @@ p {
   border: 4px solid #fff;
   margin-left: -30px;
   margin-top: -30px;
-  display: none;
   top: 0;
   position: absolute;
   z-index: 100;
 }
- .square_2 p{
+.square_2_j,
+.square_2_es
+.square_2_vo,
+.square_2_ke,
+.square_2_fi,
+.square_2_am,
+.square_2_ap,
+.square_2_v,
+.square_2_lu{
+  display: none;
+}
+.topping p{
   font-family: "Gilroy", sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 25px;
   font-weight: lighter;
 }
-.square_2_j img,
-.square_2_es img,
-.square_2_vo img,
-.square_2_ke img,
-.square_2_fi img,
-.square_2_am img,
-.square_2_ap img,
-.square_2_v img,
-.square_2_lu img,
-.square_2_la img,
-.square_2_kp img,
-.square_2_f img,
-.square_2_ra img,
-.square_2_mo img{
+.topping{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.square_2_j .topping p + img,
+.square_2_es .topping p + img,
+.square_2_vo .topping p + img,
+.square_2_ke .topping p + img,
+.square_2_fi .topping p + img,
+.square_2_am .topping p + img,
+.square_2_ap .topping p + img,
+.square_2_v .topping p + img,
+.square_2_lu .topping p + img,
+.square_2_la .topping p + img,
+.square_2_kp .topping p + img,
+.square_2_f .topping p + img,
+.square_2_ra .topping p + img,
+.square_2_mo .topping p + img{
+  height: 22px;
+  width: auto;
+  top: -15px;
+  left: 130px;
+  z-index: 1;
+}
+
+
+.square_2_j img:last-child,
+.square_2_es img:last-child,
+.square_2_vo img:last-child,
+.square_2_ke img:last-child,
+.square_2_fi img:last-child,
+.square_2_am img:last-child,
+.square_2_ap img:last-child,
+.square_2_v img:last-child,
+.square_2_lu img:last-child,
+.square_2_la img:last-child,
+.square_2_kp img:last-child,
+.square_2_f img:last-child,
+.square_2_ra img:last-child,
+.square_2_mo img:last-child{
   height: 120px;
   width: auto;
   position: absolute;
   margin-left: 80px;
   margin-top: 30px;
+  z-index: 0;
 }

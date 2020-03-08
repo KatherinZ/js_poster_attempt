@@ -1,17 +1,48 @@
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
-    el.style.transform = `translate(${anime.random(0, 300)}vw, ${anime.random(0, -30)}vh)`
+    el.style.transform = `translate(${anime.random(0, 300)}vw, ${anime.random(0, 10)}vh)`
     el.onmouseenter  = function(){
       el.style.background = getRGBColor()
     }
     el.onmouseleave = function(){
       el.style.background = 'none'
     }
-    // function addEl(){
+
+el.onclick = function() {
+  document.getElementById('element_j_big').style.display = 'block'
+}
+
+document.getElementById('element_vo').onclick = function() {
+  document.getElementById('element_vo_big').style.display = 'block'
+}
+
+document.getElementById('element_ke').onclick = function() {
+  document.getElementById('element_ke_big').style.display = 'block'
+}
+
+
+document.getElementById('element_fi').onclick = function() {
+  document.getElementById('element_fi_big').style.display = 'block'
+}
+
+document.getElementById('element_am').onclick = function() {
+  document.getElementById('element_am_big').style.display = 'block'
+}
+
+document.getElementById('element_ap').onclick = function() {
+  document.getElementById('element_ap_big').style.display = 'block'
+}
+
+  document.getElementById('element_v').onclick = function() {
+    document.getElementById('element_v_big').style.display = 'block'
+}
+document.getElementById('element_lu').onclick = function() {
+  document.getElementById('element_lu_big').style.display = 'block'
+}
+
     let cln = el.cloneNode(true)
     document.body.append(cln)
-    console.log(cln);
-    // }
+    console.log(cln)
 })
 
 let animatedMorph = anime({
@@ -37,8 +68,3 @@ let animatedMorph = anime({
 function getRGBColor(){
   return `rgb(${anime.random(0, 255)}, ${anime.random(0, 255)}, ${anime.random(0, 255)})`
 }
-let voronka = document.getElementById('element_vo')
-voronka.onclick = document.getElementById('element_vo_big').style.display = 'block'
-let filtr = document.getElementById('element_fi')
-let filtr_big = document.getElementById('element_fi_big')
-filtr.onclick = filtr_big.style.display = 'block'
