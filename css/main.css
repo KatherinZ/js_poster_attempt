@@ -130,6 +130,7 @@ p {
   font-size: 46px;
   font-weight: 400;
   margin-left: 8px;
+  margin-top: 15px;
   padding: 5px;
 }
 .square_1 p{
@@ -141,11 +142,15 @@ p {
   margin-top: 10px;
 }
 .square_1 h2 + p{
-  margin-top: 15px;
+  margin-top: 0px;
   font-size: 18px;
 }
-.all_elements{
+.all_elements, .all_elements .inside_1{
   max-height: 2000px;
+  position: absolute;
+}
+.all_elements .inside_1{
+  margin-top: -3000px;
 }
 
 /* ШРИФТЫ */
@@ -217,14 +222,19 @@ p {
   z-index: 100;
 }
 .square_2_j,
-.square_2_es
+.square_2_es,
 .square_2_vo,
 .square_2_ke,
 .square_2_fi,
 .square_2_am,
 .square_2_ap,
 .square_2_v,
-.square_2_lu{
+.square_2_lu,
+.square_2_la,
+.square_2_kp,
+.square_2_f,
+.square_2_ra,
+.square_2_mo{
   display: none;
 }
 .topping p{
@@ -275,10 +285,11 @@ p {
 .square_2_f img:last-child,
 .square_2_ra img:last-child,
 .square_2_mo img:last-child{
-  height: 120px;
+  max-height: 120px;
+  max-width: 120px;
   width: auto;
   position: absolute;
   margin-left: 80px;
-  margin-top: 30px;
+  margin-top: 50px;
   z-index: 0;
 }
