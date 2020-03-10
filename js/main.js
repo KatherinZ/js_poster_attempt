@@ -12,7 +12,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
   //       }
   //    }
  el.onmouseenter  = function(){
-   el.style.background = getRGBColor()
+   el.style.background = palette[Math.floor(Math.random() * palette.length)]
  }
  el.onmouseleave = function(){
    el.style.background = 'none'
@@ -106,11 +106,12 @@ document.getElementById('element_ra').onclick = function() {
 document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
-document.getElementsByClassName('topping').onclick = function() {
-  document.getElementById('element_fi_big').style.display = 'none'
-  document.getElementById('element_fi_big_1').style.display = 'none'
+document.getElementById('topping').addEventListener('click', msg)
+function msg() {
+document.getElementsByClassName('square_2').style.display = 'none'
 }
 
+let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
     // let cln = el.cloneNode(true)
     // document.body.append(cln)
     // console.log(cln)

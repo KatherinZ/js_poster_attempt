@@ -12,9 +12,9 @@
   format('truetype');
 }
 @font-face {
-  font-family: "AkzidenzGroteskPro-Bold";
+  font-family: "AkzidenzGroteskPro-Regular";
   font-weight: auto;
-  src: url(fonts/AkzidenzGroteskPro-Bold.ttf)
+  src: url(fonts/AkzidenzGroteskPro-Regular.ttf)
   format('truetype');
 }
 @font-face {
@@ -185,7 +185,7 @@ p {
   font-family: "univers LT CYR", helvetica, sans-serif;
 }
 .all_elements .square_1:nth-of-type(11) h2{
-  font-family: "AkzidenzGroteskPro-Bold", helvetica, sans-serif;
+  font-family: "AkzidenzGroteskPro-Regular", helvetica, sans-serif;
 }
 .all_elements .square_1:nth-of-type(12) h2{
   font-family: arial, sans-serif;
@@ -196,20 +196,7 @@ p {
 .all_elements .square_1:nth-of-type(14) h2{
   font-family: "Gotham", sans-serif;
 }
-.square_2_j,
-.square_2_es,
-.square_2_vo,
-.square_2_ke,
-.square_2_fi,
-.square_2_am,
-.square_2_ap,
-.square_2_v,
-.square_2_lu,
-.square_2_la,
-.square_2_kp,
-.square_2_f,
-.square_2_ra,
-.square_2_mo{
+.square_2{
   width: 250px;
   height: 250px;
   color: #fff;
@@ -221,20 +208,7 @@ p {
   position: absolute;
   z-index: 100;
 }
-.square_2_j,
-.square_2_es,
-.square_2_vo,
-.square_2_ke,
-.square_2_fi,
-.square_2_am,
-.square_2_ap,
-.square_2_v,
-.square_2_lu,
-.square_2_la,
-.square_2_kp,
-.square_2_f,
-.square_2_ra,
-.square_2_mo{
+.square_2{
   display: none;
 }
 .topping p{
@@ -248,43 +222,17 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: auto;
 }
-.square_2_j .topping p + img,
-.square_2_es .topping p + img,
-.square_2_vo .topping p + img,
-.square_2_ke .topping p + img,
-.square_2_fi .topping p + img,
-.square_2_am .topping p + img,
-.square_2_ap .topping p + img,
-.square_2_v .topping p + img,
-.square_2_lu .topping p + img,
-.square_2_la .topping p + img,
-.square_2_kp .topping p + img,
-.square_2_f .topping p + img,
-.square_2_ra .topping p + img,
-.square_2_mo .topping p + img{
+.square_2 .topping p + img{
   height: 22px;
   width: auto;
-  top: -15px;
+  top: -35px;
   left: 130px;
   z-index: 1;
 }
 
-
-.square_2_j img:last-child,
-.square_2_es img:last-child,
-.square_2_vo img:last-child,
-.square_2_ke img:last-child,
-.square_2_fi img:last-child,
-.square_2_am img:last-child,
-.square_2_ap img:last-child,
-.square_2_v img:last-child,
-.square_2_lu img:last-child,
-.square_2_la img:last-child,
-.square_2_kp img:last-child,
-.square_2_f img:last-child,
-.square_2_ra img:last-child,
-.square_2_mo img:last-child{
+.square_2 img:last-child{
   max-height: 120px;
   max-width: 120px;
   width: auto;
