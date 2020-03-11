@@ -1,16 +1,22 @@
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
   // // el.style.marginLeft = Math.floor(Math.random() * window.innerWidth)
+
   el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
-  // let xPosition = Math.floor(Math.random() * window.innerWidth)
-  // let yPosition = Math.floor(Math.random()* window.innerHeight)
-  //   el.style.transform = RandomXY()
-  //
-  //    function RandomXY(){
-  //      for (let i = 0; i < 100; i++){
-  //         $('.square_1' + i).offset({top: yPosition, left: xPosition})
-  //       }
-  //    }
+//   function getYPositionOfElement() {
+//   var yPosition = Math.floor(Math.random() * window.innerHeight)
+//   return yPosition
+// }
+//   function getXPositionOfElement() {
+//   var xPosition = Math.floor(Math.random() * window.innerHeight)
+//   return xPosition
+// }
+//     el.style.transform = RandomXY()
+//      function RandomXY(){
+//        for (let i = 0; i < 100; i++){
+//           $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
+//         }
+//      }
  el.onmouseenter  = function(){
    el.style.background = palette[Math.floor(Math.random() * palette.length)]
  }
@@ -79,6 +85,7 @@ document.getElementById('element_ka_1').onclick = function() {
 document.getElementById('element_la').onclick = function() {
   document.getElementById('element_la_big').style.display = 'block'
 }
+
 document.getElementById('element_la_1').onclick = function() {
   document.getElementById('element_la_big_1').style.display = 'block'
 }
@@ -106,10 +113,9 @@ document.getElementById('element_ra').onclick = function() {
 document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
-document.getElementById('topping').addEventListener('click', msg)
-function msg() {
-document.getElementsByClassName('square_2').style.display = 'none'
-}
+$('.close').on('click', function() {
+   $(this).parent(parent()).hide()
+})
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
     // let cln = el.cloneNode(true)
@@ -137,6 +143,19 @@ let animatedMorph = anime({
   easing: 'linear'
 })
 
-function getRGBColor(){
-  return `rgb(${anime.random(0, 255)}, ${anime.random(0, 255)}, ${anime.random(0, 255)})`
+let paths = document.querySelectorAll('path')
+for (let i = 0; i < paths.length; i++){
+  let pathOne = paths[i]
+  let offset = anime.setDashoffset(pathOne)
+  pathOne.setAttribute('stroke-dashoffset', offset)
+  anime({
+    target: pathOne,
+    strokeDashOffset: [offset, 0],
+    duration: 2000,
+    delay: 500,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+  })
 }
