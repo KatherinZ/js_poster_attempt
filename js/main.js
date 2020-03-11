@@ -26,6 +26,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 document.getElementById('element_j').onclick = function() {
   document.getElementById('element_j_big').style.display = 'block'
+  document.getElementById('element_j_big').style.zIndex = zIndex++
 }
 document.getElementById('element_j_1').onclick = function() {
   document.getElementById('element_j_big_1').style.display = 'block'
@@ -114,7 +115,7 @@ document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
 $('.close').on('click', function() {
-   $(this).parent(parent()).hide()
+   $(this).closest('square_2').hide()
 })
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
@@ -143,14 +144,14 @@ let animatedMorph = anime({
   easing: 'linear'
 })
 
-let paths = document.querySelectorAll('path')
-for (let i = 0; i < paths.length; i++){
-  let pathOne = paths[i]
+let ways = document.querySelectorAll('path')
+for (let i = 0; i < ways.length; i++){
+  let pathOne = ways[i]
   let offset = anime.setDashoffset(pathOne)
   pathOne.setAttribute('stroke-dashoffset', offset)
   anime({
-    target: pathOne,
-    strokeDashOffset: [offset, 0],
+    targets: pathOne,
+    strokeDashoffset: [offset, 0],
     duration: 2000,
     delay: 500,
     loop: true,

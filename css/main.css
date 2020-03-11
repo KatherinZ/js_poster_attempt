@@ -218,18 +218,12 @@ p {
   margin-top: 25px;
   font-weight: lighter;
 }
-.topping{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: auto;
-}
 .close{
   position: absolute;
   height: 30px;
   width: auto;
-  left: 120px;
-  top: -45px;
+  left: 200px;
+  top: 5px;
 }
 
 .square_2 img:last-child{
@@ -249,11 +243,18 @@ p {
   margin-top: 50px;
   z-index: 0;
 } */
-.cezve_anim, .cezve_anim svg {
+.cezve_anim svg {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 400%;
+  height: 400%;
 }
 .cezve_anim path {
-  stroke-width: 2;
+  stroke-width: 4;
+}
+.cezve_anim{
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  width: 130px;
+  height: auto;
 }
