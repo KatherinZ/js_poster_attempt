@@ -245,6 +245,63 @@ svg path {
 
 
 
+@media (max-width: 616px) {
+  .name{
+    text-align: center;
+    position: fixed;
+    left: 3%;
+    top: 45%;
+  }
+  .square_1{
+    width: 23vw;
+    height: 23vw;
+    border: 2.5px solid #fff;
+  }
+  .square_1 h2{
+   font-size: 6.3vw;
+   margin-top: 5vw;
+   margin-left: 1.3vw;
+  }
+  .square_1 p{
+    font-size: 2.1vw;
+  }
+  .numbers p:last-child{
+    font-size: 2.1vw;
+    font-weight: bold;
+    margin-top: 1vw;
+    font-family: 'Gilroy-Medium', helvetica, sans-serif;
+    margin-left: 1.3vw;
+  }
+  .square_1 p:first-child{
+    margin-top: 1vw;
+    margin-left: 1vw;
+  }
+  .square_1 h2 + p{
+    font-size: 2.7vw;
+    margin-top: 1.5vw;
+    margin-left: 1.3vw;
+  }
+  .square_2{
+    width: 33.5vw;
+    height: 33.5vw;
+    border: 2.5px solid #fff;
+  }
+  .square_2 p{
+   font-size: 3vw;
+   margin-left: 1.5vw;
+   margin-top: 1.8vw;
+  }
+  .close{
+    height: 4vw;
+    width: auto;
+    left: 25.5vw;
+    top: 0.3vw;
+  }
+  .square_2 img:last-child{
+    max-height: 18vw;
+    max-width: 18vw;
+  }
+}
 @media (max-width: 320px) {
   .name{
     text-align: center;
@@ -298,3 +355,4 @@ svg path {
     max-height: 16vw;
     max-width: 16vw;
   }
+}

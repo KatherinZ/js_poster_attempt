@@ -26,7 +26,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 document.getElementById('element_j').onclick = function() {
   document.getElementById('element_j_big').style.display = 'block'
-  document.getElementById('element_j_big').style.zIndex = zIndex++
+  // document.getElementById('element_j_big').style.zIndex = zIndex++
 }
 document.getElementById('element_j_1').onclick = function() {
   document.getElementById('element_j_big_1').style.display = 'block'
@@ -126,7 +126,25 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
     // let cln = el.cloneNode(true)
     // document.body.append(cln)
     // console.log(cln)
+
+
+
+    // window.onload = getCoords(elem)
+    //   function getCoords(elem) {
+    //     let body = document.body
+    //     let clientTop = body.clientTop
+    //     let clientSide = body.clientLeft
+    //     let w = elem.getBoundingClientRect(){
+    //     body.scrollTo(clientHeight/2, clientWidth/2)
+    //   }
+    //   }
+
+
+
+
+
 })
+
 
 let animatedMorph = anime({
   targets: '.name img',
@@ -148,19 +166,58 @@ let animatedMorph = anime({
   easing: 'linear'
 })
 
-let ways = document.querySelectorAll('path')
-for (let i = 0; i < ways.length; i++){
-  let pathOne = ways[i]
-  let offset = anime.setDashoffset(pathOne)
-  pathOne.setAttribute('stroke-dashoffset', offset)
-  anime({
-    targets: pathOne,
-    strokeDashoffset: [offset, 0],
-    duration: 2000,
-    delay: 500,
-    loop: true,
-    direction: 'alternate',
-    easing: 'easeInOutSine',
-    autoplay: true
-  })
-}
+// document.querySelector('svg').onclick = function animateSVG() {
+//   let path = document.querySelector('.svg_anim path')
+//   let length = path.getTotalLength()
+//   path.style.transition = path.style.WebkitTransition = 'none'
+//   path.style.strokeDasharray = length + ' ' + length
+//   path.style.strokeDashoffset = length
+//   path.getBoundingClientRect()
+//   path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s ease-in-out'
+//   path.style.strokeDashoffset = '0'
+// }
+
+$('svg').eq(0).one("mouseenter", function() {
+  let path_all = document.querySelectorAll('.svd_anim path');
+
+  $.each(path_all, function(key, path) {
+
+  let length = path.getTotalLength();
+  path.style.transition = path.style.WebkitTransition =
+    'none';
+  path.style.strokeDasharray = length + ' ' + length;
+  path.style.strokeDashoffset = length;
+  path.getBoundingClientRect();
+  path.style.transition = path.style.WebkitTransition =
+    'stroke-dashoffset 2s ease-in-out';
+  path.style.strokeDashoffset = '0';
+
+   });
+});
+
+
+// var path = document.querySelector('.squiggle-animated path');
+// var length = path.getTotalLength();
+// path.style.transition = path.style.WebkitTransition =
+//   'none';
+// path.style.strokeDasharray = '' + length + ' ' + length;
+// path.style.strokeDashoffset = length;
+// path.getBoundingClientRect();
+// path.style.transition = path.style.WebkitTransition =
+//   'stroke-dashoffset 2s ease-in-out';
+// path.style.strokeDashoffset = '0';
+// for (let i = 0; i < path.length; i++){
+//   let pathOne = path[i]
+//   let offset = anime.setDashoffset(pathOne)
+//   pathOne.setAttribute('stroke-dashoffset', offset)
+//   anime({
+//     targets: pathOne,
+//     strokeDashoffset: [offset, 0],
+//     duration: 2000,
+//     delay: 500,
+//     loop: true,
+//     direction: 'alternate',
+//     easing: 'easeInOutSine',
+//     autoplay: true
+//   })
+// }
