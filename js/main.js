@@ -114,27 +114,13 @@ document.getElementById('element_ra').onclick = function() {
 document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
+let elem = document.querySelectorAll('.square_2')
+let btn = document.querySelectorAll('.close')
+elem.forEach(function(btn){
 $('.close').on('click', function() {
-   $('.close')closest('.square_2').hide()
+   $(this).parent().hide()
 })
-// let bigSquare = document.querySelectorAll('.square_2')
-// let closeButtons = document.querySelectorAll('.close')
-//
-// bigSquare.forEach(function(item){
-//   item.addEventListener('click', function(e){
-//     e.preventDefault()
-//
-//     let modalId = this.getAttribute('data-modal'),
-//     modalElem = document.querySelector('.modal[data-modal = " ' + modalId + '"]')
-//   })
-// })
-// btnClose.onclick = function () {
-//   for (var i = 0; i < bigSquare.length; i++) {
-//
-//     bigSquare[1].style.display = 'none'
-//   }
-// }
-
+})
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
     // let cln = el.cloneNode(true)
