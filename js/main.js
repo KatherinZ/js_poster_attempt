@@ -3,7 +3,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 // рандом через anime
 
-  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+  el.style.transform = `translate(${anime.random(5, 250)}vw, ${anime.random(0, 50)}vh)`
 
 
 
@@ -48,11 +48,37 @@ document.getElementById('element_es').onclick = function() {
 document.getElementById('element_es_1').onclick = function() {
   document.getElementById('element_es_big_1').style.display = 'block'
 }
+document.getElementById('element_es_2').style.backgroundColor ='#40E0D0'
+document.getElementById('element_es_2').onclick = function(){
+  document.querySelector('h1').style.color = '#40E0D0'
+}
+
+
 document.getElementById('element_vo').onclick = function() {
   document.getElementById('element_vo_big').style.display = 'block'
 }
 document.getElementById('element_vo_1').onclick = function() {
   document.getElementById('element_vo_big_1').style.display = 'block'
+}
+document.getElementById('element_vo_2').style.backgroundColor ='#67A7AF'
+document.getElementById('element_vo_2').onclick = function(){
+let svg = document.getElementById('svg')
+let path = document.querySelectorAll('path')
+for (let i = 0; i < path.length; i++){
+  let pathOne = path[i]
+  let offset = anime.setDashoffset(pathOne)
+  pathOne.setAttribute('stroke-dashoffset', offset)
+  anime({
+    targets: pathOne,
+    strokeDashoffset: [offset, 0],
+    duration: 2000,
+    delay: 500,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+  })
+}
 }
 
 document.getElementById('element_ke').onclick = function() {
@@ -60,6 +86,11 @@ document.getElementById('element_ke').onclick = function() {
 }
 document.getElementById('element_ke_1').onclick = function() {
   document.getElementById('element_ke_big_1').style.display = 'block'
+}
+document.getElementById('element_ke_2').style.backgroundColor = '#A79494'
+document.getElementById('element_ke_2').onclick = function() {
+  document.body.style.backgroundColor = '#121150'
+  document.querySelector('.name img').style.display = 'none'
 }
 
 document.getElementById('element_fi').onclick = function() {
@@ -70,8 +101,9 @@ document.getElementById('element_fi_1').onclick = function() {
 }
 
 document.getElementById('element_am').onclick = function() {
-  document.getElementById('element_am_big').style.display = 'block'
+  document.getElementById('element_am_big_1').style.display = 'block'
 }
+
 document.getElementById('element_am_1').onclick = function() {
   document.getElementById('element_am_big_1').style.display = 'block'
 }
@@ -86,7 +118,7 @@ document.getElementById('element_v').onclick = function() {
   document.getElementById('element_v_big').style.display = 'block'
 }
   document.getElementById('element_v_1').onclick = function() {
-    document.getElementById('element_v_big_1').style.display = 'block'
+    document.getElementsByClassName('.name').style.filter = 'blur(10px)'
 }
 document.getElementById('element_ka').onclick = function() {
   document.getElementById('element_ka_big').style.display = 'block'
@@ -126,15 +158,22 @@ document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
 
-//закрытие рандомных окон
+// закрытие рандомных окон
 
-let elem = document.querySelectorAll('.square_2')
-let btn = document.querySelectorAll('.close')
-elem.forEach(function(btn){
-$(btn).on('click', function(btn) {
-   $(this).parent('.square_2').hide()
-})
-})
+
+let noCezve = document.getElementById('close_j')
+let bigJ = document.getElementById('element_j_big')
+noCezve.onclick = function(){
+ bigJ.style.display = 'none'
+}
+
+// let elem = document.querySelectorAll('.square_2')
+// let btn = document.querySelector('.close')
+// elem.forEach(function(btn){
+// $(btn).on('click', function(btn) {
+//    $(this).children().hide()
+// })
+// })
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
 
@@ -149,15 +188,17 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
     // window.onload = getCoords(elem)
     //   function getCoords(elem) {
     //     let body = document.body
-    //     let clientTop = body.clientTop
-    //     let clientSide = body.clientLeft
-    //     let w = elem.getBoundingClientRect(){
-    //     body.scrollTo(clientHeight/2, clientWidth/2)
-    //   }
+    //     let clientTop = body.getBoundingClientRect().y
+    //     let clientSide = body.getBoundingClientRect().x
+    //
+    //     let move = function(){
+    //       body.scrollTo(clientHeight/2, clientWidth/2)
+    //     }
     //   }
 
 
 })
+
 
 //анимация тестуры поверх заголовка
 
@@ -200,21 +241,31 @@ let animatedMorph = anime({
 // })
 // })
 
-//анимация свг через библеотеку
-let svg = document.querySelector('svg')
-let path = document.querySelectorAll('path')
-for (let i = 0; i < path.length; i++){
-  let pathOne = path[i]
-  let offset = anime.setDashoffset(pathOne)
-  pathOne.setAttribute('stroke-dashoffset', offset)
-  anime({
-    targets: pathOne,
-    strokeDashoffset: [offset, 0],
-    duration: 2000,
-    delay: 500,
-    loop: true,
-    direction: 'alternate',
-    easing: 'easeInOutSine',
-    autoplay: true
-  })
+
+//анимация свг через библиотеку
+
+
+// let svg = document.querySelector('svg')
+// let path = document.querySelectorAll('path')
+// for (let i = 0; i < path.length; i++){
+//   let pathOne = path[i]
+//   let offset = anime.setDashoffset(pathOne)
+//   pathOne.setAttribute('stroke-dashoffset', offset)
+//   anime({
+//     targets: pathOne,
+//     strokeDashoffset: [offset, 0],
+//     duration: 2000,
+//     delay: 1200,
+//     loop: true,
+//     direction: 'alternate',
+//     easing: 'easeInOutSine',
+//     autoplay: true
+//   })
+// }
+
+
+
+let imgMove = document.getElementById('#img_move')
+imgMove.onmouseenter = function(e) {
+  imgMove.style.transform = `translate(${3}vw, ${3}vh)`
 }

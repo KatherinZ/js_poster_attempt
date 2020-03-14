@@ -85,6 +85,7 @@ p {
   position: fixed;
   left: 3%;
   top: 15%;
+  filter: blur(0);
 }
 .name h1{
   font-size: 15vw;
@@ -101,6 +102,9 @@ p {
   text-align: center;
   transition: 1000ms all ease;
   z-index: 0;
+}
+.name svg{
+  opacity: 0.6;
 }
 .square_1{
   border: 0.3vw solid #fff;
@@ -142,9 +146,13 @@ p {
   font-size: 1.2vw;
   margin-top: auto;
 }
-.all_elements, .all_elements .inside_1{
+.all_elements, .all_elements .inside_1, .all_elements .inside_2{
   max-height: 130vw;
   position: absolute;
+}
+.all_elements .inside_2{
+  position: absolute;
+  margin-top: -4000px;
 }
 
 /* ШРИФТЫ */
