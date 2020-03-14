@@ -75,6 +75,7 @@ body{
   background-color: #000;
   max-width: 7000px;
   max-height: 1000px;
+  transition: all ease 400ms;
 }
 p {
   font-family: 'Gilroy-Medium', helvetica, sans-serif;
@@ -215,7 +216,7 @@ p {
   position: absolute;
   height: 2.1vw;
   width: auto;
-  left: 14vw;
+  left: 14.2vw;
   top: 0.1vw;
 }
 
@@ -239,13 +240,16 @@ svg path {
   position: absolute;
   margin-left: 25%;
   margin-top: 20%;
-  width: 11vw;
+  max-width: 7vw;
   height: auto;
+}
+.svg_anim path{
+  -webkit-transition: none;
 }
 
 
 
-@media (max-width: 616px) {
+@media (max-width: 864px) {
   .name{
     text-align: center;
     position: fixed;
@@ -253,53 +257,60 @@ svg path {
     top: 45%;
   }
   .square_1{
-    width: 23vw;
-    height: 23vw;
-    border: 2.5px solid #fff;
+    width: 19vw;
+    height: 19vw;
+    border: 0.4vw solid #fff;
   }
   .square_1 h2{
-   font-size: 6.3vw;
-   margin-top: 5vw;
+   font-size: 5vw;
+   margin-top: 6vw;
    margin-left: 1.3vw;
   }
   .square_1 p{
-    font-size: 2.1vw;
+    font-size: 1.4vw;
   }
   .numbers p:last-child{
-    font-size: 2.1vw;
+    font-size: 1.7vw;
     font-weight: bold;
     margin-top: 1vw;
     font-family: 'Gilroy-Medium', helvetica, sans-serif;
-    margin-left: 1.3vw;
+    margin-left: 1.2vw;
   }
   .square_1 p:first-child{
     margin-top: 1vw;
     margin-left: 1vw;
   }
   .square_1 h2 + p{
-    font-size: 2.7vw;
-    margin-top: 1.5vw;
+    font-size: 2.3vw;
+    margin-top: 1vw;
     margin-left: 1.3vw;
   }
   .square_2{
-    width: 33.5vw;
-    height: 33.5vw;
-    border: 2.5px solid #fff;
+    width: 27vw;
+    height: 27vw;
+    border: 0.4vw solid #fff;
   }
   .square_2 p{
-   font-size: 3vw;
+   font-size: 2.3vw;
    margin-left: 1.5vw;
    margin-top: 1.8vw;
   }
   .close{
-    height: 4vw;
+    height: 3vw;
     width: auto;
-    left: 25.5vw;
+    left: 22vw;
     top: 0.3vw;
   }
   .square_2 img:last-child{
-    max-height: 18vw;
-    max-width: 18vw;
+    max-height: 14vw;
+    max-width: 14vw;
+  }
+  .svg_anim {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 20%;
+    max-width: 9vw;
+    height: auto;
   }
 }
 @media (max-width: 320px) {

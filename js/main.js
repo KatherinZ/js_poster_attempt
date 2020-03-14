@@ -1,22 +1,34 @@
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
+
+// рандом через марджин
+
   // // el.style.marginLeft = Math.floor(Math.random() * window.innerWidth)
 
-  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
-//   function getYPositionOfElement() {
-//   var yPosition = Math.floor(Math.random() * window.innerHeight)
-//   return yPosition
-// }
-//   function getXPositionOfElement() {
-//   var xPosition = Math.floor(Math.random() * window.innerHeight)
-//   return xPosition
-// }
-//     el.style.transform = RandomXY()
-//      function RandomXY(){
-//        for (let i = 0; i < 100; i++){
-//           $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
-//         }
-//      }
+
+// рандом через anime
+
+  // el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+
+
+  // рандом через position функцию
+
+  function getYPositionOfElement() {
+  var yPosition = Math.floor(Math.random() * window.innerHeight)
+  return yPosition
+}
+  function getXPositionOfElement() {
+  var xPosition = Math.floor(Math.random() * window.innerHeight)
+  return xPosition
+}
+    el.style.transform = RandomXY()
+     function RandomXY(){
+       for (let i = 0; i < 100; i++){
+          $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
+        }
+     }
+
+
  el.onmouseenter  = function(){
    el.style.background = palette[Math.floor(Math.random() * palette.length)]
  }
@@ -117,8 +129,8 @@ document.getElementById('element_ra_1').onclick = function() {
 let elem = document.querySelectorAll('.square_2')
 let btn = document.querySelectorAll('.close')
 elem.forEach(function(btn){
-$('.close').on('click', function() {
-   $(this).parent().hide()
+$(btn).on('click', function(btn) {
+   $(this).parent('.square_2').hide()
 })
 })
 
@@ -138,7 +150,6 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
     //     body.scrollTo(clientHeight/2, clientWidth/2)
     //   }
     //   }
-
 
 
 
@@ -166,46 +177,22 @@ let animatedMorph = anime({
   easing: 'linear'
 })
 
-// document.querySelector('svg').onclick = function animateSVG() {
-//   let path = document.querySelector('.svg_anim path')
-//   let length = path.getTotalLength()
-//   path.style.transition = path.style.WebkitTransition = 'none'
-//   path.style.strokeDasharray = length + ' ' + length
-//   path.style.strokeDashoffset = length
-//   path.getBoundingClientRect()
-//   path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 2s ease-in-out'
-//   path.style.strokeDashoffset = '0'
-// }
+$('svg').on("click", function() {
+  let path = document.querySelectorAll('.svg_anim path')
 
-$('svg').eq(0).one("mouseenter", function() {
-  let path_all = document.querySelectorAll('.svd_anim path');
+  $.each(path, function(key, path) {
 
-  $.each(path_all, function(key, path) {
-
-  let length = path.getTotalLength();
+  let length = path.getTotalLength()
   path.style.transition = path.style.WebkitTransition =
-    'none';
-  path.style.strokeDasharray = length + ' ' + length;
-  path.style.strokeDashoffset = length;
-  path.getBoundingClientRect();
+    'none'
+  path.style.strokeDasharray = length + ' ' + length
+  path.style.strokeDashoffset = length
+  path.getBoundingClientRect()
   path.style.transition = path.style.WebkitTransition =
-    'stroke-dashoffset 2s ease-in-out';
-  path.style.strokeDashoffset = '0';
-
-   });
-});
-
-
-// var path = document.querySelector('.squiggle-animated path');
-// var length = path.getTotalLength();
-// path.style.transition = path.style.WebkitTransition =
-//   'none';
-// path.style.strokeDasharray = '' + length + ' ' + length;
-// path.style.strokeDashoffset = length;
-// path.getBoundingClientRect();
-// path.style.transition = path.style.WebkitTransition =
-//   'stroke-dashoffset 2s ease-in-out';
-// path.style.strokeDashoffset = '0';
+    'stroke-dashoffset 2s ease-in'
+  path.style.strokeDashoffset = '0'
+})
+})
 // for (let i = 0; i < path.length; i++){
 //   let pathOne = path[i]
 //   let offset = anime.setDashoffset(pathOne)
