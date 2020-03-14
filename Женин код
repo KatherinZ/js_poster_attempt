@@ -1,0 +1,67 @@
+
+let squares = [...document.querySelectorAll('.square_1')]
+
+let locations1 = [
+  [23, 32],
+  [123, 32]
+]
+
+let allLocations = [locations1]
+
+allLocations[]
+
+squares.forEach(el => {
+  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+})
+
+squares.forEach((el, i) => {
+  let elX = el.getBoundingClientRect().x + el.getBoundingClientRect().width
+  console.log('elX', elX);
+
+  squares.slice(i + 1).filter(filteEl => {
+    let filteElX = filteEl.getBoundingClientRect().x + filteEl.getBoundingClientRect().width
+    console.log('filteElX', filteElX);
+    if (elX < filteElX) {
+      return true
+    }
+  })
+  if (squares.length > 0) {
+    console.log('есть пересечения');
+    console.log(squares);
+  }
+})
+
+// let square = document.querySelector('.square_1').getBoundingClientRect()
+// //1)поставить элемент в рандомной точке
+// let x = anime.random(5, 150)
+// let y = anime.random(5, 50)
+// // 2) сгенерировать вторую пару координат ху
+//
+// // 3) проверить координаты на пересечение
+// if (x > (square.width + square.x)) {
+//   if (y > (square.height + square.y)) {
+//     el.style.transform = `translate(${x}vw, ${y}vh)`
+//   }
+// } else {
+//   x = anime.random(5, 150)
+// }
+// 4) если нет пересечения, добавить элемент
+
+  // рандом через position функцию
+
+//   function getYPositionOfElement() {
+//   var yPosition = Math.floor(Math.random() * window.innerHeight)
+//   return yPosition
+// }
+//   function getXPositionOfElement() {
+//   var xPosition = Math.floor(Math.random() * window.innerHeight)
+//   return xPosition
+// }
+//     el.style.transform = RandomXY()
+//      function RandomXY(){
+//        for (let i = 0; i < 100; i++){
+//           $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
+//         }
+//      }
+
+//рандомный ховер

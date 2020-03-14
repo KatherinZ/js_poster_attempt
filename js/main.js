@@ -1,33 +1,31 @@
 
 let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
-// рандом через марджин
-
-  // // el.style.marginLeft = Math.floor(Math.random() * window.innerWidth)
-
-
 // рандом через anime
 
-  // el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+
+
 
 
   // рандом через position функцию
 
-  function getYPositionOfElement() {
-  var yPosition = Math.floor(Math.random() * window.innerHeight)
-  return yPosition
-}
-  function getXPositionOfElement() {
-  var xPosition = Math.floor(Math.random() * window.innerHeight)
-  return xPosition
-}
-    el.style.transform = RandomXY()
-     function RandomXY(){
-       for (let i = 0; i < 100; i++){
-          $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
-        }
-     }
+//   function getYPositionOfElement() {
+//   var yPosition = Math.floor(Math.random() * window.innerHeight)
+//   return yPosition
+// }
+//   function getXPositionOfElement() {
+//   var xPosition = Math.floor(Math.random() * window.innerHeight)
+//   return xPosition
+// }
+//     el.style.transform = RandomXY()
+//      function RandomXY(){
+//        for (let i = 0; i < 100; i++){
+//           $('.square_1' + i).offset({top: getYPositionOfElement(), left: getXPositionOfElement()})
+//         }
+//      }
 
+//рандомный ховер
 
  el.onmouseenter  = function(){
    el.style.background = palette[Math.floor(Math.random() * palette.length)]
@@ -36,9 +34,10 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
    el.style.background = 'none'
  }
 
+//появление модальных окон
+
 document.getElementById('element_j').onclick = function() {
   document.getElementById('element_j_big').style.display = 'block'
-  // document.getElementById('element_j_big').style.zIndex = zIndex++
 }
 document.getElementById('element_j_1').onclick = function() {
   document.getElementById('element_j_big_1').style.display = 'block'
@@ -126,6 +125,9 @@ document.getElementById('element_ra').onclick = function() {
 document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
+
+//закрытие рандомных окон
+
 let elem = document.querySelectorAll('.square_2')
 let btn = document.querySelectorAll('.close')
 elem.forEach(function(btn){
@@ -135,11 +137,14 @@ $(btn).on('click', function(btn) {
 })
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
+
+//клонирование элементов массива
+
     // let cln = el.cloneNode(true)
     // document.body.append(cln)
     // console.log(cln)
 
-
+//при загрузке
 
     // window.onload = getCoords(elem)
     //   function getCoords(elem) {
@@ -152,10 +157,9 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
     //   }
 
 
-
-
 })
 
+//анимация тестуры поверх заголовка
 
 let animatedMorph = anime({
   targets: '.name img',
@@ -177,34 +181,40 @@ let animatedMorph = anime({
   easing: 'linear'
 })
 
-$('svg').on("click", function() {
-  let path = document.querySelectorAll('.svg_anim path')
+//анимация свг через функцию
 
-  $.each(path, function(key, path) {
+// $('svg').on("click", function() {
+//   let path = document.querySelectorAll('.svg_anim path')
+//
+//   $.each(path, function(key, path) {
+//
+//   let length = path.getTotalLength()
+//   path.style.transition =
+//     'none'
+//   path.style.strokeDasharray = length + ' ' + length
+//   path.style.strokeDashoffset = length
+//   path.getBoundingClientRect()
+//   path.style.transition =
+//     'stroke-dashoffset 3s ease-in'
+//   path.style.strokeDashoffset = '0'
+// })
+// })
 
-  let length = path.getTotalLength()
-  path.style.transition = path.style.WebkitTransition =
-    'none'
-  path.style.strokeDasharray = length + ' ' + length
-  path.style.strokeDashoffset = length
-  path.getBoundingClientRect()
-  path.style.transition = path.style.WebkitTransition =
-    'stroke-dashoffset 2s ease-in'
-  path.style.strokeDashoffset = '0'
-})
-})
-// for (let i = 0; i < path.length; i++){
-//   let pathOne = path[i]
-//   let offset = anime.setDashoffset(pathOne)
-//   pathOne.setAttribute('stroke-dashoffset', offset)
-//   anime({
-//     targets: pathOne,
-//     strokeDashoffset: [offset, 0],
-//     duration: 2000,
-//     delay: 500,
-//     loop: true,
-//     direction: 'alternate',
-//     easing: 'easeInOutSine',
-//     autoplay: true
-//   })
-// }
+//анимация свг через библеотеку
+let svg = document.querySelector('svg')
+let path = document.querySelectorAll('path')
+for (let i = 0; i < path.length; i++){
+  let pathOne = path[i]
+  let offset = anime.setDashoffset(pathOne)
+  pathOne.setAttribute('stroke-dashoffset', offset)
+  anime({
+    targets: pathOne,
+    strokeDashoffset: [offset, 0],
+    duration: 2000,
+    delay: 500,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+  })
+}
