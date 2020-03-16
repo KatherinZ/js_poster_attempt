@@ -85,7 +85,7 @@ p {
   position: fixed;
   left: 3%;
   top: 15%;
-  filter: blur(0);
+  -webkit-filter: blur(0);
 }
 .name h1{
   font-size: 15vw;
@@ -127,20 +127,20 @@ p {
   font-size: 3.5vw;
   font-weight: 400;
   margin-left: 0.8vw;
-  margin-top: 2vw;
+  margin-top: 3vw;
 }
 .square_1 p{
   font-size: 0.9vw;
   font-weight: 400;
   margin-left: 1vw;
 }
+.numbers{
+  margin-top: 0.8vw;
+}
 .numbers p:last-child{
   font-size: 1.2vw;
   font-weight: bold;
   font-family: 'Gilroy-Medium', helvetica, sans-serif;
-}
-.square_1 p:first-child{
-  margin-top: 0.8vw;
 }
 .square_1 h2 + p{
   font-size: 1.2vw;
@@ -153,6 +153,12 @@ p {
 .all_elements .inside_2{
   position: absolute;
   margin-top: -4000px;
+}
+.all_elements .square_1:first-child h2{
+  margin-top: 2.5vw;
+}
+.all_elements .square_1:first-child h2 + p{
+  margin-top: 0.5vw;
 }
 
 /* ШРИФТЫ */
@@ -257,7 +263,7 @@ svg path {
 
 
 
-@media (max-width: 864px) {
+@media (max-width: 834px) {
   .name{
     text-align: center;
     position: fixed;
@@ -265,20 +271,20 @@ svg path {
     top: 45%;
   }
   .square_1{
-    width: 19vw;
-    height: 19vw;
-    border: 0.4vw solid #fff;
+    width: 16vw;
+    height: 16vw;
+    border: 0.3vw solid #fff;
   }
   .square_1 h2{
-   font-size: 5vw;
-   margin-top: 6vw;
-   margin-left: 1.3vw;
+   font-size: 4.8vw;
+   margin-top: 4vw;
+   margin-left: 1.2vw;
   }
   .square_1 p{
-    font-size: 1.4vw;
+    font-size: 1.2vw;
   }
   .numbers p:last-child{
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     font-weight: bold;
     margin-top: 1vw;
     font-family: 'Gilroy-Medium', helvetica, sans-serif;
@@ -289,8 +295,8 @@ svg path {
     margin-left: 1vw;
   }
   .square_1 h2 + p{
-    font-size: 2.3vw;
-    margin-top: 1vw;
+    font-size: 2vw;
+    margin-top: 0.4vw;
     margin-left: 1.3vw;
   }
   .square_2{
