@@ -262,7 +262,7 @@ p {
   height: 400%;
 }
 svg path {
-  stroke-width: 2;
+  stroke-width: 3;
 }
 .svg_anim {
   position: absolute;

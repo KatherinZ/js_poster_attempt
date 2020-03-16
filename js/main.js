@@ -3,7 +3,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 // рандом через anime
 
-  el.style.transform = `translate(${anime.random(5, 250)}vw, ${anime.random(0, 50)}vh)`
+  el.style.transform = `translate(${anime.random(5, 100)}vw, ${anime.random(0, 50)}vh)`
 
 
 
