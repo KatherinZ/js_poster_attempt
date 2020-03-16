@@ -101,7 +101,7 @@ document.getElementById('element_fi_2').onmouseleave = function(){
 }
 
 document.getElementById('element_am').onclick = function() {
-  document.getElementById('element_am_big_1').style.display = 'block'
+  document.getElementById('element_am_big').style.display = 'block'
 }
 document.getElementById('element_am_1').onclick = function() {
   document.getElementById('element_am_big_1').style.display = 'block'
