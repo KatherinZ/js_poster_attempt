@@ -212,20 +212,20 @@ document.getElementById('element_ra_2').onmouseleave = function(){
 }
 
 // закрытие рандомных окон
+})
 
-//
-// let noCezve = document.getElementById('close_j')
-// let bigJ = document.getElementById('element_j_big')
-// noCezve.onclick = function(){
-//  bigJ.style.display = 'none'
-// }
-
+// let elem = document.querySelectorAll('.square_2')
+// let btn = document.querySelectorAll('.close')
+// elem.forEach(function(btn){
+// $(btn).on('click', function(btn) {
+//    $(this).closest().hide()
+// })
+// })
 let elem = document.querySelectorAll('.square_2')
 let btn = document.querySelectorAll('.close')
 elem.forEach(function(btn){
 $(btn).on('click', function(btn) {
    $(this).parent().hide()
-})
 })
 
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
