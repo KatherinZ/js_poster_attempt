@@ -167,7 +167,7 @@ document.getElementById('element_la_2').onclick = function() {
   document.querySelector('.name img').style.display = 'none'
 }
 document.getElementById('element_la_2').onmouseleave = function(){
-  document.getElementById('element_la_2').style.backgroundColor = '#999EC7'
+  document.getElementById('element_la_2').style.backgroundColor = 'rgba(153, 158, 199, 0.5)'
 }
 
 document.getElementById('element_mo').onclick = function() {
@@ -224,7 +224,7 @@ let elem = document.querySelectorAll('.square_2')
 let btn = document.querySelectorAll('.close')
 elem.forEach(function(btn){
 $(btn).on('click', function(btn) {
-   $(this).closest('.square_2').hide()
+   $(this).parent().hide()
 })
 })
 
@@ -254,7 +254,7 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
 
 $(window).ready(function(){
   $('html, body').animate({scrollTop: 1000})
-  $('html, body').animate({scrollLeft: 1000})
+  $('html, body').animate({scrollLeft: 550})
 })
 
 

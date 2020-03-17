@@ -167,7 +167,7 @@ p {
 }
 .all_elements .inside_2{
   position: absolute;
-  margin-top: -2000px;
+  margin-top: -1500px;
 }
 .all_elements .square_1:first-child h2{
   margin-top: 2.5vw;
