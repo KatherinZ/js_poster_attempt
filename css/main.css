@@ -99,7 +99,7 @@ p {
   position: fixed;
   left: 25%;
   top: -3vw;
-  height: 1000px;
+  height: 2000px;
   height: auto;
   opacity: 0;
   display: flex;
@@ -110,6 +110,7 @@ p {
 .blue svg,
 .purple svg{
   height: 100vw;
+  stroke-width: 2;
 }
 .name img{
   height: 50vw;
@@ -166,7 +167,7 @@ p {
 }
 .all_elements .inside_2{
   position: absolute;
-  margin-top: -4000px;
+  margin-top: -2000px;
 }
 .all_elements .square_1:first-child h2{
   margin-top: 2.5vw;

@@ -3,7 +3,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 // рандом через anime
 
-  el.style.transform = `translate(${anime.random(5, 100)}vw, ${anime.random(0, 50)}vh)`
+  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
 
 
 
@@ -48,12 +48,12 @@ document.getElementById('element_es').onclick = function() {
 document.getElementById('element_es_1').onclick = function() {
   document.getElementById('element_es_big_1').style.display = 'block'
 }
-document.getElementById('element_es_2').style.backgroundColor ='#40E0D0'
+document.getElementById('element_es_2').style.backgroundColor = 'rgba(64, 224, 208, 0.5)'
 document.getElementById('element_es_2').onclick = function(){
   document.querySelector('h1').style.color = '#40E0D0'
 }
 document.getElementById('element_es_2').onmouseleave = function(){
-  document.getElementById('element_es_2').style.backgroundColor = '#40E0D0'
+  document.getElementById('element_es_2').style.backgroundColor = 'rgba(64, 224, 208, 0.5)'
 }
 
 
@@ -63,12 +63,12 @@ document.getElementById('element_vo').onclick = function() {
 document.getElementById('element_vo_1').onclick = function() {
   document.getElementById('element_vo_big_1').style.display = 'block'
 }
-document.getElementById('element_vo_2').style.backgroundColor = '#10505E'
+document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.5)'
 document.getElementById('element_vo_2').onclick = function() {
-  document.getElementsByClassName('square_1').style.border = '0.3 vw solid #EF3F3F'
+  document.querySelectorAll('.square_1').style.borderColor = '#EF3F3F'
 }
 document.getElementById('element_vo_2').onmouseleave = function(){
-  document.getElementById('element_vo_2').style.backgroundColor = '#10505E'
+  document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.5)'
 }
 
 document.getElementById('element_ke').onclick = function() {
@@ -77,13 +77,12 @@ document.getElementById('element_ke').onclick = function() {
 document.getElementById('element_ke_1').onclick = function() {
   document.getElementById('element_ke_big_1').style.display = 'block'
 }
-document.getElementById('element_ke_2').style.backgroundColor = '#A79494'
+document.getElementById('element_ke_2').style.backgroundColor = 'rgba(154, 101, 101, 0.5)'
 document.getElementById('element_ke_2').onclick = function() {
-  document.body.style.backgroundColor = '#1E063E'
   document.querySelector('.name h1').style.color = '#fff'
 }
 document.getElementById('element_ke_2').onmouseleave = function(){
-  document.getElementById('element_ke_2').style.backgroundColor = '#A79494'
+  document.getElementById('element_ke_2').style.backgroundColor = 'rgba(154, 101, 101, 0.5)'
 }
 
 document.getElementById('element_fi').onclick = function() {
@@ -92,12 +91,12 @@ document.getElementById('element_fi').onclick = function() {
 document.getElementById('element_fi_1').onclick = function() {
   document.getElementById('element_fi_big_1').style.display = 'block'
 }
-document.getElementById('element_fi_2').style.backgroundColor = '#4C828A'
+document.getElementById('element_fi_2').style.backgroundColor = 'rgba(76, 130, 138, 0.5)'
 document.getElementById('element_fi_2').onclick = function() {
   document.getElementById('name').style.webkitFilter = 'blur(10px)'
 }
 document.getElementById('element_fi_2').onmouseleave = function(){
-  document.getElementById('element_fi_2').style.backgroundColor = '#4C828A'
+  document.getElementById('element_fi_2').style.backgroundColor = 'rgba(76, 130, 138, 0.5)'
 }
 
 document.getElementById('element_am').onclick = function() {
@@ -106,9 +105,9 @@ document.getElementById('element_am').onclick = function() {
 document.getElementById('element_am_1').onclick = function() {
   document.getElementById('element_am_big_1').style.display = 'block'
 }
-document.getElementById('element_am_2').style.backgroundColor = '#999999'
+document.getElementById('element_am_2').style.backgroundColor = 'rgba(153, 153, 153, 0.5)'
 document.getElementById('element_am_2').onclick = function() {
-  document.querySelector('.pipes').style.opacity = '0.8'
+  document.querySelector('.pipes').style.opacity = '0.6'
   let svg1 = document.querySelectorAll('.pipes svg')
   let path1 = document.querySelectorAll('.pipes path')
   for (let i = 0; i < path1.length; i++){
@@ -122,13 +121,12 @@ document.getElementById('element_am_2').onclick = function() {
       delay: 500,
       loop: true,
       direction: 'alternate',
-      easing: 'easeInOutSine',
-      autoplay: true
+      easing: 'easeInOutSine'
     })
   }
 }
 document.getElementById('element_am_2').onmouseleave = function(){
-  document.getElementById('element_am_2').style.backgroundColor = '#999999'
+  document.getElementById('element_am_2').style.backgroundColor = 'rgba(153, 153, 153, 0.5)'
 }
 
 document.getElementById('element_ap').onclick = function() {
@@ -137,11 +135,18 @@ document.getElementById('element_ap').onclick = function() {
 document.getElementById('element_ap_1').onclick = function() {
   document.getElementById('element_ap_big_1').style.display = 'block'
 }
+document.getElementById('element_ap_2').style.backgroundColor = 'rgba(60, 189, 218, 0.5)'
+document.getElementById('element_ap_2').onclick = function() {
+  document.querySelector('.pipes').style.opacity = '0'
+}
+document.getElementById('element_ap_2').onmouseleave = function() {
+  document.getElementById('element_ap_2').style.backgroundColor = 'rgba(60, 189, 218, 0.5)'
+}
 document.getElementById('element_v').onclick = function() {
   document.getElementById('element_v_big').style.display = 'block'
 }
 document.getElementById('element_v_1').onclick = function() {
-  document.getElementById('element_v_1_big').style.display = 'block'
+  document.getElementById('element_v_big_1').style.display = 'block'
 }
 document.getElementById('element_ka').onclick = function() {
   document.getElementById('element_ka_big').style.display = 'block'
@@ -149,6 +154,7 @@ document.getElementById('element_ka').onclick = function() {
 document.getElementById('element_ka_1').onclick = function() {
   document.getElementById('element_ka_big_1').style.display = 'block'
 }
+
 document.getElementById('element_la').onclick = function() {
   document.getElementById('element_la_big').style.display = 'block'
 }
@@ -156,6 +162,14 @@ document.getElementById('element_la').onclick = function() {
 document.getElementById('element_la_1').onclick = function() {
   document.getElementById('element_la_big_1').style.display = 'block'
 }
+document.getElementById('element_la_2').style.backgroundColor = 'rgba(153, 158, 199, 0.5)'
+document.getElementById('element_la_2').onclick = function() {
+  document.querySelector('.name img').style.display = 'none'
+}
+document.getElementById('element_la_2').onmouseleave = function(){
+  document.getElementById('element_la_2').style.backgroundColor = '#999EC7'
+}
+
 document.getElementById('element_mo').onclick = function() {
   document.getElementById('element_mo_big').style.display = 'block'
 }
@@ -174,12 +188,12 @@ document.getElementById('element_f').onclick = function() {
 document.getElementById('element_f_1').onclick = function() {
   document.getElementById('element_f_big_1').style.display = 'block'
 }
-document.getElementById('element_f_2').style.backgroundColor = '#3F3E5E'
+document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 62, 94, 0.5)'
 document.getElementById('element_f_2').onclick = function(){
   document.getElementById('name').style.webkitFilter = 'none'
 }
 document.getElementById('element_f_2').onmouseleave = function(){
-  document.getElementById('element_f_2').style.backgroundColor = '#3F3E5E'
+  document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 62, 94, 0.5)'
 }
 
 document.getElementById('element_ra').onclick = function() {
@@ -188,13 +202,13 @@ document.getElementById('element_ra').onclick = function() {
 document.getElementById('element_ra_1').onclick = function() {
   document.getElementById('element_ra_big_1').style.display = 'block'
 }
-document.getElementById('element_ra_2').style.backgroundColor = '#6D4A4A'
+document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.5)'
 document.getElementById('element_ra_2').onclick = function(){
-  document.body.style.backgroundColor = 'inherit'
+  document.querySelector('.name h1').style.color = '#79D5E0'
   document.querySelector('.name img').style.display = 'block'
 }
 document.getElementById('element_ra_2').onmouseleave = function(){
-  document.getElementById('element_ra_2').style.backgroundColor = '#6D4A4A'
+  document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.5)'
 }
 
 // закрытие рандомных окон
@@ -236,6 +250,11 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
     //   }
 
 
+})
+
+$(window).ready(function(){
+  $('html, body').animate({scrollTop: 1000})
+  $('html, body').animate({scrollLeft: 1000})
 })
 
 
