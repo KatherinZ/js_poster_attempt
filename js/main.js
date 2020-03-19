@@ -26,6 +26,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 //      }
 
 //рандомный ховер
+let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
 
  el.onmouseenter  = function(){
    el.style.background = palette[Math.floor(Math.random() * palette.length)]
@@ -42,6 +43,31 @@ document.getElementById('element_j').onclick = function() {
 document.getElementById('element_j_1').onclick = function() {
   document.getElementById('element_j_big_1').style.display = 'block'
 }
+document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 105, 0.5)'
+document.getElementById('element_j_2').onclick = function() {
+  document.querySelector('.horizontal_pipes').style.opacity = '0.6'
+  let svg0 = document.querySelectorAll('.horizontal_pipes svg')
+  let path0 = document.querySelectorAll('.horizontal_pipes path')
+  for (let i = 0; i < path0.length; i++){
+    let pathOne = path0[i]
+    let offset = anime.setDashoffset(pathOne)
+    pathOne.setAttribute('stroke-dashoffset', offset)
+    anime({
+      targets: pathOne,
+      strokeDashoffset: [offset, 0],
+      duration: 4000,
+      delay: 500,
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutSine'
+    })
+  }
+}
+document.getElementById('element_j_2').onmouseleave = function(){
+  document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 105, 0.5)'
+}
+
+
 document.getElementById('element_es').onclick = function() {
   document.getElementById('element_es_big').style.display = 'block'
 }
@@ -65,7 +91,17 @@ document.getElementById('element_vo_1').onclick = function() {
 }
 document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.5)'
 document.getElementById('element_vo_2').onclick = function() {
-  document.querySelectorAll('.square_1').style.borderColor = '#EF3F3F'
+  document.getElementById('name').animate([
+    {opacity: 0.5},
+    {opacity: 0.1},
+    {opacity: 0.4},
+    {opacity: 1}
+  ], {
+    duration: 1000,
+    loop: true,
+    direction: 'alternate',
+    autoplay: true
+  })
 }
 document.getElementById('element_vo_2').onmouseleave = function(){
   document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.5)'
@@ -138,6 +174,7 @@ document.getElementById('element_ap_1').onclick = function() {
 document.getElementById('element_ap_2').style.backgroundColor = 'rgba(60, 189, 218, 0.5)'
 document.getElementById('element_ap_2').onclick = function() {
   document.querySelector('.pipes').style.opacity = '0'
+  document.querySelector('.horizontal_pipes').style.opacity = '0'
 }
 document.getElementById('element_ap_2').onmouseleave = function() {
   document.getElementById('element_ap_2').style.backgroundColor = 'rgba(60, 189, 218, 0.5)'
@@ -228,7 +265,6 @@ $(btn).on('click', function(btn) {
    $(this).parent().hide()
 })
 
-let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
 
 //клонирование элементов массива
 
@@ -251,6 +287,10 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
 
 
 })
+
+
+// прокрутка при обновлении
+
 
 $(window).ready(function(){
   $('html, body').animate({scrollTop: 1000})
@@ -298,7 +338,6 @@ for (let i = 0; i < path2.length; i++){
     autoplay: true
   })
 }
-
 
 
 //анимация свг через функцию
