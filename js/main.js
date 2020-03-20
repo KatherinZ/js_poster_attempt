@@ -35,24 +35,6 @@ let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF',
    el.style.background = 'none'
  }
 
-//появление модальных окон
-
-// document.getElementById('element_ra').onclick = function() {
-//   document.getElementById('element_ra_big').style.display = 'block'
-// }
-// document.getElementById('element_ra_1').onclick = function() {
-//   document.getElementById('element_ra_big_1').style.display = 'block'
-// }
-// document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.5)'
-// document.getElementById('element_ra_2').onclick = function(){
-//   document.querySelector('.name h1').style.color = '#79D5E0'
-//   document.querySelector('.name img').style.display = 'block'
-// }
-// document.getElementById('element_ra_2').onmouseleave = function(){
-//   document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.5)'
-// }
-
-
 
 // открытие-закрытие рандомных окон
 
@@ -183,13 +165,18 @@ document.getElementById('element_ap_2').onmouseleave = function() {
 }
 
 //8
-// document.getElementById('element_v_2').style.backgroundColor = 'rgba()'
-// document.getElementById('element_v_2').onclick = function() {
-//
-// }
-// document.getElementById('element_v_2').onmouseleave = function(){
-//   document.getElementById('element_v_2').style.backgroundColor = 'rgba()'
-// }
+document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
+document.getElementById('element_v_2').onclick = function() {
+document.querySelector('.rects .rect_k').style.height = '10vw'
+document.querySelector('.rects .rect_f').style.top = '-2vw'
+document.querySelector('.rects .rect_y').style.width = '12.8vw'
+document.querySelector('.rects .rect_n').style.height = '10vw'
+document.querySelector('.rects .rect_ya').style.top = '0vw'
+document.querySelector('.rects .rect_l').style.top = '25vw'
+}
+document.getElementById('element_v_2').onmouseleave = function(){
+  document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
+}
 
 //9
 // document.getElementById('element_ka_2').style.backgroundColor = 'rgba()'
@@ -228,22 +215,41 @@ document.getElementById('element_f_2').onmouseleave = function(){
 }
 
 //13
-// document.getElementById('element_ra_2').style.backgroundColor = 'rgba()'
-// document.getElementById('element_ra_2').onclick = function() {
-//
-// }
-// document.getElementById('element_ra_2').onmouseleave = function(){
-//   document.getElementById('element_ra_2').style.backgroundColor = 'rgba()'
-// }
+document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.4)'
+document.getElementById('element_ra_2').onclick = function(){
+  document.querySelector('.name h1').style.display = 'block'
+  document.querySelector('.name h1').style.color = '#79D5E0'
+  document.querySelector('.name img').style.display = 'block'
+}
+document.getElementById('element_ra_2').onmouseleave = function(){
+  document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.4)'
+}
 
 //14
-// document.getElementById('element_mo_2').style.backgroundColor = 'rgba()'
-// document.getElementById('element_mo_2').onclick = function() {
-//
-// }
-// document.getElementById('element_mo_2').onmouseleave = function(){
-//   document.getElementById('element_mo_2').style.backgroundColor = 'rgba()'
-// }
+document.getElementById('element_mo_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
+document.getElementById('element_mo_2').onclick = function() {
+  document.getElementById('rects').style.opacity = '0'
+  let zoom = {}
+  zoom.opacityIn = [1, 0];
+  zoom.scaleIn = [0, 1];
+  zoom.scaleOut = 3;
+  zoom.durationIn = 5000;
+  zoom.durationOut = 3000;
+  zoom.delay = 1500;
+
+  anime.timeline()
+  .add({
+    targets: '.name h1',
+    opacity: zoom.opacityIn,
+    scale: zoom.scaleOut,
+    duration: zoom.durationIn,
+    loop: true,
+    direction: 'alternate'
+  })
+}
+document.getElementById('element_mo_2').onmouseleave = function(){
+  document.getElementById('element_mo_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
+}
 
 })
 
@@ -287,6 +293,7 @@ let animatedMorph = anime({
 })
 
  // анимация свг внутри больших квадратов
+
 let svg2 = document.querySelectorAll('.all_elements svg')
 let path2 = document.querySelectorAll('.all_elements path')
 for (let i = 0; i < path2.length; i++){
@@ -304,22 +311,3 @@ for (let i = 0; i < path2.length; i++){
     autoplay: true
   })
 }
-
-//анимация свг через функцию
-
-// $('svg').on("click", function() {
-//   let path = document.querySelectorAll('.svg_anim path')
-//
-//   $.each(path, function(key, path) {
-//
-//   let length = path.getTotalLength()
-//   path.style.transition =
-//     'none'
-//   path.style.strokeDasharray = length + ' ' + length
-//   path.style.strokeDashoffset = length
-//   path.getBoundingClientRect()
-//   path.style.transition =
-//     'stroke-dashoffset 3s ease-in'
-//   path.style.strokeDashoffset = '0'
-// })
-// })
