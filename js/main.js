@@ -3,7 +3,7 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 
 // рандом через anime
 
-  el.style.transform = `translate(${anime.random(5, 150)}vw, ${anime.random(0, 50)}vh)`
+  el.style.transform = `translate(${anime.random(5, 250)}vw, ${anime.random(0, 50)}vh)`
 
 
 
@@ -25,7 +25,10 @@ let arr = [...document.querySelectorAll('.square_1')].map(function(el) {
 //         }
 //      }
 
+
+
 //рандомный ховер
+
 let palette = ['#40E0D0', '#6D4A4A', '#A79494', '#999999', '#6DC1CD', '#67A7AF', '#4C828A', '#4B2323']
 
  el.onmouseenter  = function(){
@@ -87,6 +90,8 @@ document.getElementById('element_j_2').onmouseleave = function(){
 document.getElementById('element_es_2').style.backgroundColor = 'rgba(64, 224, 208, 0.4)'
 document.getElementById('element_es_2').onclick = function(){
   document.querySelector('h1').style.color = '#40E0D0'
+  document.querySelector('.rects').style.opacity = 0
+
 }
 document.getElementById('element_es_2').onmouseleave = function(){
   document.getElementById('element_es_2').style.backgroundColor = 'rgba(64, 224, 208, 0.4)'
@@ -95,17 +100,7 @@ document.getElementById('element_es_2').onmouseleave = function(){
 //3
 document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.4)'
 document.getElementById('element_vo_2').onclick = function() {
-  document.getElementById('name').animate([
-    {opacity: 0.5},
-    {opacity: 0.1},
-    {opacity: 0.4},
-    {opacity: 1}
-  ], {
-    duration: 1000,
-    loop: true,
-    direction: 'alternate',
-    autoplay: true
-  })
+  document.getElementById('name').style.animationPlayState = 'running'
 }
 document.getElementById('element_vo_2').onmouseleave = function(){
   document.getElementById('element_vo_2').style.backgroundColor = 'rgba(16, 80, 94, 0.4)'
@@ -114,7 +109,9 @@ document.getElementById('element_vo_2').onmouseleave = function(){
 //4
 document.getElementById('element_ke_2').style.backgroundColor = 'rgba(154, 101, 101, 0.4)'
 document.getElementById('element_ke_2').onclick = function() {
-  document.querySelector('.name h1').style.color = '#fff'
+    document.querySelector('.name h1').style.color = '#fff'
+    document.querySelector('.rects').style.opacity = 0
+
 }
 document.getElementById('element_ke_2').onmouseleave = function(){
   document.getElementById('element_ke_2').style.backgroundColor = 'rgba(154, 101, 101, 0.4)'
@@ -167,25 +164,37 @@ document.getElementById('element_ap_2').onmouseleave = function() {
 //8
 document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
 document.getElementById('element_v_2').onclick = function() {
+  document.querySelector('.name img').style.display = 'none'
+  document.querySelector('.name h1').style.fontFamily = 'Gilroy-SemiBold', 'helvetica', 'sans-serif';
+  document.querySelector('.rects').style.opacity = 1
+  document.querySelector('.name h1').style.color = '#79D5E0'
 document.querySelector('.rects .rect_k').style.height = '10vw'
 document.querySelector('.rects .rect_f').style.top = '-2vw'
 document.querySelector('.rects .rect_y').style.width = '12.8vw'
 document.querySelector('.rects .rect_n').style.height = '10vw'
 document.querySelector('.rects .rect_ya').style.top = '0vw'
 document.querySelector('.rects .rect_l').style.top = '25vw'
+document.querySelector('.rects .rect_a').style.top = '14vw'
+document.querySelector('.rects .rect_r').style.top = '14vw'
+document.querySelector('.rects .rect_t').style.height = '11.5vw'
+document.querySelector('.rects .rect_i').style.height = '11.75vw'
+document.querySelector('.rects .rect_ii').style.top = '14vw'
+document.querySelector('.rects .rect_ja').style.height = '11.75vw'
+
 }
 document.getElementById('element_v_2').onmouseleave = function(){
   document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
 }
 
 //9
-// document.getElementById('element_ka_2').style.backgroundColor = 'rgba()'
-// document.getElementById('element_ka_2').onclick = function() {
-//
-// }
-// document.getElementById('element_ka_2').onmouseleave = function(){
-//   document.getElementById('element_ka_2').style.backgroundColor = 'rgba()'
-// }
+document.getElementById('element_ka_2').style.backgroundColor = 'rgba(0, 191, 255, 0.4)'
+document.getElementById('element_ka_2').onclick = function() {
+  document.querySelector('.name h1').style.animationPlayState = 'rinning'
+
+}
+document.getElementById('element_ka_2').onmouseleave = function(){
+  document.getElementById('element_ka_2').style.backgroundColor = 'rgba(0, 191, 255, 0.4)'
+}
 
 //10
 document.getElementById('element_la_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
@@ -197,13 +206,16 @@ document.getElementById('element_la_2').onmouseleave = function(){
 }
 
 //11
-// document.getElementById('element_kp_2').style.backgroundColor = 'rgba()'
-// document.getElementById('element_kp_2').onclick = function() {
-//
-// }
-// document.getElementById('element_kp_2').onmouseleave = function(){
-//   document.getElementById('element_kp_2').style.backgroundColor = 'rgba()'
-// }
+document.getElementById('element_kp_2').style.backgroundColor = 'rgba(127, 223, 255, 0.4)'
+document.getElementById('element_kp_2').onclick = function() {
+document.getElementById('rects').style.display = 'none'
+document.querySelector('.name h1').style.fontFamily = 'Swift','serif'
+document.querySelector('.rects').style.opacity = 0
+
+}
+document.getElementById('element_kp_2').onmouseleave = function(){
+  document.getElementById('element_kp_2').style.backgroundColor = 'rgba(127, 223, 255, 0.4)'
+}
 
 //12
 document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 62, 94, 0.4)'
@@ -220,6 +232,8 @@ document.getElementById('element_ra_2').onclick = function(){
   document.querySelector('.name h1').style.display = 'block'
   document.querySelector('.name h1').style.color = '#79D5E0'
   document.querySelector('.name img').style.display = 'block'
+  document.getElementById('name').style.animationPlayState = 'paused'
+
 }
 document.getElementById('element_ra_2').onmouseleave = function(){
   document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.4)'

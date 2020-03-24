@@ -77,6 +77,18 @@
   src: url(../fonts/Optima.ttf)
   format('truetype');
 }
+@font-face{
+  font-family: "Didot Regular";
+  font-weight: auto;
+  src: url(../fonts/Didot-Regular.ttf)
+  format('truetype');
+}
+@font-face{
+  font-family: "Adobe Jenson";
+  font-weight: auto;
+  src: url(../fonts/Adobe-Jenson.ttf)
+  format('truetype');
+}
 body{
   background-color: #000;
   max-width: 7000px;
@@ -93,6 +105,26 @@ p {
   left: 3%;
   top: 15%;
   -webkit-filter: blur(0);
+  animation: hideSeek 3s linear infinite alternate;
+  animation-play-state: paused;
+}
+@keyframes hideSeek {
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0.1;
+  }
+  75%{
+    opacity: 0.4;
+  }
+  100%{
+    opacity: 1;
+  }
+
 }
 .name h1{
   font-size: 15vw;
@@ -100,24 +132,43 @@ p {
   font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
+  animation: shadow 4s linear infinite alternate;
+  animation-play-state: paused;
+}
+@keyframes shadow {
+  0%{
+    text-shadow: 0vw 0vw #79D5E0;
+  }
+  25%{
+    text-shadow: 0.2vw 0.2vw rgba(128, 255, 255, 1);
+  }
+  50%{
+    text-shadow: 0.4vw 0.4vw rgba(153, 158, 199, 1);
+  }
+  75%{
+    text-shadow: 0.6vw 0.6vw rgba(102, 102, 255, 1);
+  }
+  100%{
+    text-shadow: 0vw 0vw rgba(16, 80, 94, 1);
+  }
 }
 .name .rects{
   position: absolute;
 }
 .rects .rect_k{
   position: absolute;
-  left: 13.39vw;
+  left: 13.41vw;
   top: 7.7vw;
-  width: 1.65vw;
+  width: 1.75vw;
   height: 5vw;
   background: #79D5E0;
   transition: all 2s ease;
 }
 .rects .rect_f{
   position: absolute;
-  left: 34vw;
-  top: 5vw;
-  width: 1.6vw;
+  left: 33.99vw;
+  top: 2.2vw;
+  width: 1.588vw;
   height: 5vw;
   background: #79D5E0;
   transition: all 2s ease;
@@ -125,9 +176,9 @@ p {
 .rects .rect_y{
   position: absolute;
   left: 52vw;
-  top: 2.65vw;
+  top: 2.69vw;
   width: 3vw;
-  height: 1.4vw;
+  height: 1.39vw;
   background: #79D5E0;
   transition: all 2s ease;
 }
@@ -135,7 +186,7 @@ p {
   position: absolute;
   left: 58.1vw;
   top: 7.6vw;
-  width: 1.65vw;
+  width: 1.62vw;
   height: 5vw;
   background: #79D5E0;
   transition: all 2s ease;
@@ -151,10 +202,64 @@ p {
 }
 .rects .rect_l{
   position: absolute;
-  left: 5.64vw;
-  top: 20.1vw;
+  left: 5.67vw;
+  top: 20.6vw;
   width: 1.6vw;
-  height: 8vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_a{
+  position: absolute;
+  left: 15.1vw;
+  top: 20.5vw;
+  width: 1.6vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_r{
+  position: absolute;
+  left: 36.1vw;
+  top: 20.5vw;
+  width: 1.6vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_t{
+  position: absolute;
+  left: 56.65vw;
+  top: 20.6vw;
+  width: 1.6vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_i{
+  position: absolute;
+  left: 79.95vw;
+  top: 20.2vw;
+  width: 1.55vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_ii{
+  position: absolute;
+  left: 85.05vw;
+  top: 20.52vw;
+  width: 1.55vw;
+  height: 7vw;
+  background: #79D5E0;
+  transition: all 2s ease;
+}
+.rects .rect_ja{
+  position: absolute;
+  left: 92.68vw;
+  top: 20.52vw;
+  width: 1.6vw;
+  height: 7vw;
   background: #79D5E0;
   transition: all 2s ease;
 }
@@ -234,7 +339,7 @@ opacity: 0;
   font-size: 1.2vw;
   font-weight: bold;
   font-family: 'Gilroy-Medium', helvetica, sans-serif;
-  margin-right: 1vw;
+  margin-right: 0.2vw;
 }
 .square_1 h2 + p{
   font-size: 1.2vw;
@@ -276,7 +381,7 @@ opacity: 0;
   font-family: "Oldbaskerville", serif;
 }
 .all_elements .square_1:nth-of-type(6) h2{
-  font-family: "Optima", serif;
+  font-family: "Didot Regular", serif;
 }
 .all_elements .square_1:nth-of-type(7) h2{
   font-family: "Swift", serif;
@@ -285,7 +390,7 @@ opacity: 0;
   font-family: "Bodoni", serif;
 }
 .all_elements .square_1:nth-of-type(9) h2{
-  font-family: "Caslon", serif;
+  font-family: "Adobe Jenson", serif;
 }
 .all_elements .square_1:nth-of-type(10) h2{
   font-family: "univers LT CYR", helvetica, sans-serif;
@@ -486,7 +591,7 @@ svg path {
   }
   .numbers p:last-child{
     font-size: 1.5vw;
-    margin-right: 0.5vw;
+    margin-right: 0.2vw;
   }
   .square_1 p:first-child{
     margin-top: 0.5vw;
@@ -686,7 +791,7 @@ svg path {
 
 @media (max-width: 414px) {
   .name{
-    top: 25%;
+    top: 40%;
   }
   .all_elements .inside_2{
     margin-top: -140vw;
@@ -752,7 +857,7 @@ svg path {
 }
 @media (max-width: 320px) {
   .name{
-    top: 25%;
+    top: 35%;
   }
   .all_elements .inside_2{
     margin-top: -140vw;
