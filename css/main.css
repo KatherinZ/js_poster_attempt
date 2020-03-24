@@ -132,7 +132,7 @@ p {
   font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
-  animation: shadow 4s linear infinite alternate;
+  animation: shadow 4s ease 1s infinite alternate;
   animation-play-state: paused;
 }
 @keyframes shadow {

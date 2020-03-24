@@ -164,6 +164,16 @@ document.getElementById('element_ap_2').onmouseleave = function() {
 //8
 document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
 document.getElementById('element_v_2').onclick = function() {
+  document.querySelector('.name h1').style.animationPlayState = 'running'
+}
+document.getElementById('element_v_2').onmouseleave = function(){
+  document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
+}
+
+//9
+document.getElementById('element_ka_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
+document.getElementById('element_ka_2').onclick = function() {
+  
   document.querySelector('.name img').style.display = 'none'
   document.querySelector('.name h1').style.fontFamily = 'Gilroy-SemiBold', 'helvetica', 'sans-serif';
   document.querySelector('.rects').style.opacity = 1
@@ -180,22 +190,10 @@ document.querySelector('.rects .rect_t').style.height = '11.5vw'
 document.querySelector('.rects .rect_i').style.height = '11.75vw'
 document.querySelector('.rects .rect_ii').style.top = '14vw'
 document.querySelector('.rects .rect_ja').style.height = '11.75vw'
-
-}
-document.getElementById('element_v_2').onmouseleave = function(){
-  document.getElementById('element_v_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
-}
-
-//9
-document.getElementById('element_ka_2').style.backgroundColor = 'rgba(0, 191, 255, 0.4)'
-document.getElementById('element_ka_2').onclick = function() {
-  document.querySelector('.name h1').style.animationPlayState = 'rinning'
-
 }
 document.getElementById('element_ka_2').onmouseleave = function(){
-  document.getElementById('element_ka_2').style.backgroundColor = 'rgba(0, 191, 255, 0.4)'
+  document.getElementById('element_ka_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
 }
-
 //10
 document.getElementById('element_la_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
 document.getElementById('element_la_2').onclick = function() {
@@ -206,7 +204,7 @@ document.getElementById('element_la_2').onmouseleave = function(){
 }
 
 //11
-document.getElementById('element_kp_2').style.backgroundColor = 'rgba(127, 223, 255, 0.4)'
+document.getElementById('element_kp_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
 document.getElementById('element_kp_2').onclick = function() {
 document.getElementById('rects').style.display = 'none'
 document.querySelector('.name h1').style.fontFamily = 'Swift','serif'
@@ -214,7 +212,7 @@ document.querySelector('.rects').style.opacity = 0
 
 }
 document.getElementById('element_kp_2').onmouseleave = function(){
-  document.getElementById('element_kp_2').style.backgroundColor = 'rgba(127, 223, 255, 0.4)'
+  document.getElementById('element_kp_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
 }
 
 //12
@@ -233,6 +231,7 @@ document.getElementById('element_ra_2').onclick = function(){
   document.querySelector('.name h1').style.color = '#79D5E0'
   document.querySelector('.name img').style.display = 'block'
   document.getElementById('name').style.animationPlayState = 'paused'
+  document.getElementById('name').style.opacity = '1'
 
 }
 document.getElementById('element_ra_2').onmouseleave = function(){
