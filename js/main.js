@@ -53,6 +53,7 @@ Array.from(squareOneList).forEach(element => {
 
   element.onclick = function(){
     childSquareTwo.style.display = 'block'
+    childSquareTwo.style.zIndex = 'this.style.zIndex + 50'
   }
   closeBtn.onclick = function(e){
     e.stopPropagation()
@@ -173,7 +174,7 @@ document.getElementById('element_v_2').onmouseleave = function(){
 //9
 document.getElementById('element_ka_2').style.backgroundColor = 'rgba(128, 255, 255, 0.4)'
 document.getElementById('element_ka_2').onclick = function() {
-  
+
   document.querySelector('.name img').style.display = 'none'
   document.querySelector('.name h1').style.fontFamily = 'Gilroy-SemiBold', 'helvetica', 'sans-serif';
   document.querySelector('.rects').style.opacity = 1
@@ -204,7 +205,7 @@ document.getElementById('element_la_2').onmouseleave = function(){
 }
 
 //11
-document.getElementById('element_kp_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
+document.getElementById('element_kp_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
 document.getElementById('element_kp_2').onclick = function() {
 document.getElementById('rects').style.display = 'none'
 document.querySelector('.name h1').style.fontFamily = 'Swift','serif'
@@ -212,16 +213,16 @@ document.querySelector('.rects').style.opacity = 0
 
 }
 document.getElementById('element_kp_2').onmouseleave = function(){
-  document.getElementById('element_kp_2').style.backgroundColor = 'rgba(153, 158, 199, 0.4)'
+  document.getElementById('element_kp_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
 }
 
 //12
-document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 62, 94, 0.4)'
+document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 162, 194, 0.4)'
 document.getElementById('element_f_2').onclick = function(){
   document.getElementById('name').style.webkitFilter = 'none'
 }
 document.getElementById('element_f_2').onmouseleave = function(){
-  document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 62, 94, 0.4)'
+  document.getElementById('element_f_2').style.backgroundColor = 'rgba(63, 162, 194, 0.4)'
 }
 
 //13
@@ -238,32 +239,6 @@ document.getElementById('element_ra_2').onmouseleave = function(){
   document.getElementById('element_ra_2').style.backgroundColor = 'rgba(109, 74, 74, 0.4)'
 }
 
-//14
-document.getElementById('element_mo_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
-document.getElementById('element_mo_2').onclick = function() {
-  document.getElementById('rects').style.opacity = '0'
-  let zoom = {}
-  zoom.opacityIn = [1, 0];
-  zoom.scaleIn = [0, 1];
-  zoom.scaleOut = 3;
-  zoom.durationIn = 5000;
-  zoom.durationOut = 3000;
-  zoom.delay = 1500;
-
-  anime.timeline()
-  .add({
-    targets: '.name h1',
-    opacity: zoom.opacityIn,
-    scale: zoom.scaleOut,
-    duration: zoom.durationIn,
-    loop: true,
-    direction: 'alternate'
-  })
-}
-document.getElementById('element_mo_2').onmouseleave = function(){
-  document.getElementById('element_mo_2').style.backgroundColor = 'rgba(102, 102, 255, 0.4)'
-}
-
 })
 
 
@@ -277,10 +252,10 @@ document.getElementById('element_mo_2').onmouseleave = function(){
 
 // прокрутка при загрузке страницы
 
-// $(window).ready(function(){
-//   $('html, body').animate({scrollTop: 1000})
-//   $('html, body').animate({scrollLeft: 550})
-// })
+$(window).ready(function(){
+  $('html, body').animate({scrollTop: 1000})
+  $('html, body').animate({scrollLeft: 550})
+})
 
 
 //анимация тестуры поверх заголовка
