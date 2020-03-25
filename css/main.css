@@ -1,8 +1,8 @@
 @import "reset.css";
 @font-face {
-  font-family: "Gilroy";
+  font-family: "Gilroy-SemiBold";
   font-weight: auto;
-  src: url(../fonts/Gilroy-Semi-Bold.ttf)
+  src: url(../fonts/Gilroy-SemiBold.ttf)
   format('truetype');
 }
 @font-face {
@@ -128,7 +128,7 @@ p {
 .name h1{
   font-size: 15vw;
   color: #79D5E0;
-  font-family: 'Gilroy', helvetica, sans-serif;
+  font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
   animation: shadow 4s ease 1s infinite alternate;
