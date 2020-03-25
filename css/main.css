@@ -94,7 +94,6 @@ body{
   max-width: 7000px;
   max-height: 1000px;
   transition: all ease 400ms;
-  cursor: url(../img/bean.svg), pointer;
 }
 p {
   font-family: 'Gilroy-Medium', helvetica, sans-serif;
@@ -129,7 +128,7 @@ p {
 .name h1{
   font-size: 15vw;
   color: #79D5E0;
-  font-family: 'Gilroy-SemiBold', helvetica, sans-serif;
+  font-family: 'Gilroy', helvetica, sans-serif;
   z-index: -2;
   position: absolute;
   animation: shadow 4s ease 1s infinite alternate;
@@ -526,39 +525,6 @@ svg path {
   margin-top: -1.5vw;
 }
 
-/* @media (max-width: 1680px) {
-  .name{
-    left: 20%;
-    top: 40%;
-  }
-  .square_1{
-    width: 17.5vw;
-    height: 17.5vw;
-    border: 0.3vw solid #fff;
-  }
-  .square_1 h2{
-   font-size: 6vw;
-   margin-top: 3.2vw;
-  }
-  .square_1 p{
-    font-size: 1.8vw;
-  }
-  .numbers p:last-child{
-    font-size: 2vw;
-    font-weight: bold;
-    margin-top: 1vw;
-    font-family: 'Gilroy-Medium', helvetica, sans-serif;
-  }
-  .square_1 p:first-child{
-    margin-top: 1vw;
-    margin-left: 1vw;
-  }
-  .square_1 h2 + p{
-    font-size: 2vw;
-    margin-top: 0.4vw;
-    margin-left: 1.3vw;
-  }
-} */
 @media (max-width: 1280px) {
   .pipes{
     left: -15vw;
