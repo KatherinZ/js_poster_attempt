@@ -63,7 +63,7 @@ Array.from(squareOneList).forEach(element => {
 
 // анимации элементов из inside_2
 // 1
-document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 105, 0.4)'
+document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 155, 0.4)'
 document.getElementById('element_j_2').onclick = function() {
   document.querySelector('.horizontal_pipes').style.opacity = '0.6'
   let svg0 = document.querySelectorAll('.horizontal_pipes svg')
@@ -84,7 +84,7 @@ document.getElementById('element_j_2').onclick = function() {
   }
 }
 document.getElementById('element_j_2').onmouseleave = function(){
-  document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 105, 0.4)'
+  document.getElementById('element_j_2').style.backgroundColor = 'rgba(15, 13, 155, 0.4)'
 }
 
 //2
