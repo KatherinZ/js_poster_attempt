@@ -820,7 +820,6 @@ svg path {
   .pipes path{
     stroke-width: 1;
   }
-  
 }
 @media (max-width: 320px) {
   .name{
